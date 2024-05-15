@@ -18,7 +18,7 @@ correctchoices[5]='c'
 correctchoices[6]='d'
 correctchoices[7]='b'
 correctchoices[8]='c'
-correctchoices[9]='a'
+correctchoices[9]='a';
 correctchoices[10]='c'
 
 /////Don't edit beyond here//////////////////////////
@@ -41,7 +41,7 @@ for (q=1;q<=totalquestions;q++){
 	}
 
 if (incorrect==null)
-incorrect="a/b"
+incorrect="a/b";
 document.cookie='q='+incorrect
 if (document.cookie=='')
 alert("Your browser does not accept cookies. Please adjust your browser settings.")

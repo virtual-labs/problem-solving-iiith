@@ -43,10 +43,10 @@
 	*/
 	function getChildren(elem, elem_type, elem_attribute, elem_attribute_match, option, depth)
 	{           
-		if(!option)
-			var option="single";
-		if(!depth)
-			var depth=-1;
+		if(!option){
+			var option="single"; }
+		if(!depth){
+			var depth=-1;}
 		if(elem){
 			var children= elem.childNodes;
 			var result=null;
@@ -83,8 +83,8 @@
 	
 	function isChildOf(elem, parent){
 		if(elem){
-			if(elem==parent)
-				return true;
+			if(elem==parent){
+				return true;}
 			while(elem.parentNode != 'undefined'){
 				return isChildOf(elem.parentNode, parent);
 			}
@@ -110,18 +110,18 @@
 	};
 	
 	function calculeOffsetLeft(r){
-		return calculeOffset(r,"offsetLeft")
+		return calculeOffset(r,"offsetLeft");
 	};
 	
 	function calculeOffsetTop(r){
-		return calculeOffset(r,"offsetTop")
+		return calculeOffset(r,"offsetTop");
 	};
 	
 	function calculeOffset(element,attr){
 		var offset=0;
 		while(element){
 			offset+=element[attr];
-			element=element.offsetParent
+			element=element.offsetParent;
 		}
 		return offset;
 	};
@@ -144,7 +144,7 @@
 			});
 			return elem.currentStyle[prop];
 		}
-		else return null;
+		else {return null;}
 	}
 	
 /****
