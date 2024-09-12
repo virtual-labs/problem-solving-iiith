@@ -57,8 +57,9 @@ if (incorrect[incorrect.length-1]=='b')
 incorrect=""
 document.result[0].value=totalquestions-incorrect.length+" out of "+totalquestions
 document.result[2].value=(totalquestions-incorrect.length)/totalquestions*100+"%"
-for (temp=0;temp<incorrect.length;temp++)
+for (temp=0;temp<incorrect.length-1;temp++)
 document.result[1].value+=incorrect[temp]+", "
+document.result[1].value+=incorrect[temp]
 
 
 </script>
