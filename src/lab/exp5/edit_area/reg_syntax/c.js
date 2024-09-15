@@ -19,7 +19,7 @@ editAreaLoader.load_syntax["c"] = {
 			'do', 'else', 'enum', 'for', 'goto', 'if', 'sizeof',
 			'switch', 'while'
 		]
- 		,'keywords' : [
+		,'keywords' : [
 			'break', 'case', 'continue', 'default', 'delete',
 			'return'
 		]

@@ -81,7 +81,7 @@ def getInputFileNames(directory):
 	Files = Files.strip();
 	Files = Files.split('\n');
 	return Files;
-def index(req):	
+def index(req):
 	FormData = util.FieldStorage(req);
 	langauge= FormData['language'];
 	try:
@@ -157,7 +157,7 @@ def index(req):
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
 					JudgeData_html+="<td> Check your algo </td>"
-					JudgeData_html+="</tr>";	
+					JudgeData_html+="</tr>";
 					break;
 			else:
 				JudgeData_html+="<td> Failed </td>"

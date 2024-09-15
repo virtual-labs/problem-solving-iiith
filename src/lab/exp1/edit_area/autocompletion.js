@@ -111,7 +111,7 @@ var EditArea_autocompletion= {
 				if( this.selectIndex >= 0 && this.selectIndex < as.length )
 				{
 					as[ this.selectIndex ].onmousedown();
-					return false
+					return false;
 				}
 				// simply add an enter in the code
 				else

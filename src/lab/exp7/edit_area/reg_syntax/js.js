@@ -32,7 +32,7 @@ editAreaLoader.load_syntax["js"] = {
 			'JavaClass', 'onUnload', 'routeEvent', 'watch', 'Document', 'JavaObject', 'open', 'scroll', 'window', 
 			'Element', 'JavaPackage', 'opener', 'scrollbars', 'Window', 'escape', 'length', 'Option', 'scrollBy'			
 		]
-    	,'functions' : [
+		,'functions' : [
 			// common functions for Window object
 			'alert', 'Array', 'back', 'blur', 'clearInterval', 'close', 'confirm', 'eval ', 'focus', 'forward', 'home',
 			'name', 'navigate', 'onblur', 'onerror', 'onfocus', 'onload', 'onmove',

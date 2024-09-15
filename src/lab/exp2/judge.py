@@ -81,7 +81,7 @@ def getInputFileNames(directory):
 	Files = Files.strip();
 	Files = Files.split('\n');
 	return Files;
-def index(req):	
+def index(req):
 	FormData = util.FieldStorage(req);
 	langauge= FormData['language'];
 	try:

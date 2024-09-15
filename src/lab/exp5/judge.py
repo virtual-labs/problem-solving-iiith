@@ -93,7 +93,7 @@ def index(req):
 	Hints = FormData['hintC']
 	highHint = FormData['highHint']    
 #	HighestHint = FormData['hintGenerate']
-	#save the code in a file 
+#save the code in a file 
 	codeName = PATH + "currentCode."+langauge;
 	F = open(codeName,"w");
 	F.write(code);
@@ -125,7 +125,7 @@ def index(req):
 
 		for i in InputTestFiles:
 			Input =  i #Input File where the final-build cases are there
-			JudgeData_html+="<tr>";	
+			JudgeData_html+="<tr>";
 			F=open(Input,"r");
 			JudgeData_html+="<td>"+F.read()+"</td>"
 			F.close();
@@ -157,7 +157,7 @@ def index(req):
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
 					JudgeData_html+="<td> Check your algo </td>"
-					JudgeData_html+="</tr>";	
+					JudgeData_html+="</tr>";
 					break;
 			else:
 				JudgeData_html+="<td> Failed </td>"

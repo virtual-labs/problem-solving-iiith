@@ -16,7 +16,6 @@ def index(req,qNo,hintNo,sid):
                 F = open(dir+"Hint_"+hintNo+".html","r");
 
                 s =  F.read()
-                
                 F.close()
         except:
                 s = 'Failed to load' ;

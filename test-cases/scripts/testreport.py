@@ -109,7 +109,7 @@ def createTestReport(root, labName, gitLabUrl, allTestCasesLink):
     for path in allTestCasesLink:
         basename = os.path.basename(path)
 
-        sno = str(count)+ ". "; 
+        sno = str(count)+ ". ";
         expname = basename.split("_")[0];
         testcasename = "[[" + path + "][" + basename + "]]";
         passfail = ""; defectlink = "";

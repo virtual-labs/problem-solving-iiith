@@ -108,7 +108,6 @@ def index(req):
 			result = "Compile Error"
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
-
 	elif(action=="Run" and compileErrors==""):	
 		#code compiled successfully
 		#now have to execute current.out

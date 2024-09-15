@@ -81,7 +81,7 @@ def getInputFileNames(directory):
 	Files = Files.strip();
 	Files = Files.split('\n');
 	return Files;
-def index(req):	
+def index(req):
 	FormData = util.FieldStorage(req);
 	langauge= FormData['language'];
 	try:
@@ -91,7 +91,7 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']  
 #	HighestHint = FormData['hintGenerate']
 	#save the code in a file 
 	codeName = PATH + "currentCode."+langauge;

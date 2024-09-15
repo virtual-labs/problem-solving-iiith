@@ -21,7 +21,7 @@ editAreaLoader.load_syntax["cpp"] = {
 			'catch', 'do', 'else', 'enum', 'for', 'goto', 'if',
 			'sizeof', 'switch', 'this', 'throw', 'try', 'while'
 		]
- 		,'keywords' : [
+		,'keywords' : [
 			'break', 'case', 'continue', 'default', 'delete',
 			'namespace', 'new', 'private', 'protected', 'public',
 			'return', 'using'

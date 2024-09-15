@@ -91,9 +91,9 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']
 #	HighestHint = FormData['hintGenerate']
-	#save the code in a file 
+#save the code in a file 
 	codeName = PATH + "currentCode."+langauge;
 	F = open(codeName,"w");
 	F.write(code);
