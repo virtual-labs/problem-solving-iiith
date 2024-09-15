@@ -1,0 +1,7 @@
+Fork is a copy of a repository.Forking repository allows you to freely experiment with changes without affecting the original project.
+We can directly fork a repo from github the steps required are-
+1)open the repository that you want to fork.
+2)Top right you will find option of forking the repo.
+3)You can go ahead with forking repo and then going to your gitbash and making the required changes.
+4)Otherwise you can go on create file option and make your file and then commit it and make a pull request.
+5)Once you make a pull request you will have your code in repository and the original creator of repo will get a pull request.
