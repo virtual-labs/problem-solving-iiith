@@ -1,0 +1,224 @@
+dl,li,dt,dd,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input, div, h1,h2,h3,p,ul,ol,img,header{
+	margin:0; padding:0; list-style:none;
+}
+
+a {
+	text-decoration: none; /* no underlines */
+	color: #961b25;/* dusty read */
+}
+
+a:hover {
+	color:#6f92a7; /*dusty blue */
+}
+
+:focus {
+	outline:0; /* no outline on focus */
+}
+
+h1,h2,h3 {
+	font-family: Georgia, Palatino, Palatino Linotype, Times, Times New Roman, serif; /* web safe colors */
+	font-weight: normal;
+}
+
+article {
+	margin:0;
+	padding:0;
+	position:relative;
+	display:block;
+}
+
+h4,h5,h6,pre,code,p {
+	font-size: 1em;
+}
+
+header#site_head {
+
+	background: url(images/bck_head.jpg);
+
+	/* create a shadow of dark pinkish red */
+
+	x-shadow: inset 0px -2px 3px #480508;
+	-khtml-box-shadow: inset 0px -2px 3px #480508;
+	-webkit-box-shadow: inset 0px -2px 3px #480508;
+	box-shadow: inset 0px -2px 3px #480508;
+
+	/* solid border of greyish white */
+
+	border-bottom: 1px solid #fffffb;
+	height: 40px;
+	width: 100%;
+	display: block;
+}
+/* header of 960px width */
+
+
+#logo 
+	{
+	float:left;
+	position:relative;
+	}
+#help-menu 
+	{
+	float:right;
+	position:relative;
+	}
+
+#logo a:link, #logo a:visited  
+	{
+	color:#FFF;
+	text-decoration: none;
+	float: left;
+	font-size: 24px;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding: 5px 25px;
+	width:300px;
+	}
+#help-menu a:link, #help-menu a:visited
+	{
+	color:#FFF;
+	text-decoration: none;
+	float: right;
+	font-size: 24px;
+	text-transform:uppercase;
+	padding: 5px 25px;
+	width:200px;
+	}
+ 
+#logo a:hover, #logo a:focus, #help-menu a:hover, #help-menu a:focus
+	{
+	color: #CC3300;
+	/*background-color:#cc3300;*/
+	}
+
+nav 
+	{
+	float:left;
+	height:38px;
+	position:relative;
+	width:100%;
+	border-top: 1px solid #3d414c;
+	border-bottom: 1px solid #3d414c;
+	}
+nav ul
+	{
+	margin-left:21px;
+	}
+
+nav ul li 
+	{
+	float: left;
+	list-style: none;
+	margin-right: 0.5em; 
+	}
+ 
+nav li a:link, nav li a:visited 
+	{
+	color: #961b25;
+	text-decoration: underline;
+	float: right;
+	font-size: 16px;
+	text-transform:uppercase;
+	padding: 9px;
+	}
+ 
+nav li a:hover, nav li a:focus 
+	{
+	color: #ffffff;
+	background-color:#961b25;
+	}
+
+nav li a.menu-active
+	{
+	color: #ffffff;
+	background-color:#961b25;
+	}	
+
+/* main-title : h1 tag 50px, Georgia, with border around */
+header#main-title 
+	{
+	font-size: 24px;
+	font-family: Georgia, "Times New Roman", Times, Serif;
+	font-weight: normal;
+	text-transform: none;
+	margin: 0 20px 2px;
+	line-height: 60px;
+	color: #3d414c;
+	padding: 10px 0;
+	letter-spacing: 0;
+	}
+
+bbody 	{
+	font-family:"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Verdana,Arial,sans-serif;
+	font-size:12px;
+	margin:0;
+	padding:0;
+	background: #f6f6ee url(images/bck.jpg);
+	}
+
+#header {
+	border-bottom:#AAA 2px solid;
+	padding:0px 10px 5px 15px;
+}
+#header h1 {
+	font-size:3em;	
+	/*color:#FFF;
+	background:#333;*/
+	padding:0px 10px 0px 10px;
+	font-family:lucida console;
+	font-weight:bold;
+	display:inline;
+}
+#header h2 {
+	padding:0px 0px 0px 5px;
+	color:#333;
+	font-family:Arial,Helvetica,sans serif;
+	display:inline;
+}
+#header img {
+	float:left;
+	height:64px;
+}
+
+#footer {
+	clear:left;
+	border-top:solid 3px #480508;
+	text-align:center;
+	font-size:.90em;
+	padding:20px 0px 0px 0px;
+	color:##480508;
+	font-weight:600;
+}
+#footer a {
+	color:##480508;
+	text-decoration:none;
+	font-style:italic;
+}
+#footer a:hover {
+	text-decoration:underline;
+}
+#content{
+	margin:auto;
+	width:1124px;
+}
+#contentLeft{
+	float:left;
+	width:700px;
+}
+#contentRight{
+	float:left;
+	width:400px;
+	margin-left:24px;
+	text-align:center;
+	color:#3d414c;
+}
+#hintBox{
+	width:400px;
+	padding:5px;
+	height:400px;
+	background: #cccccc;
+	border-radius: 10px;
+	text-align:left;
+	overflow:auto;
+
+}

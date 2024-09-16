@@ -1,0 +1,33 @@
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+#include&lt;math.h&gt;
+int isAlphabet(char x){
+	return (x&gt;='a' && x&lt;='z')||(x&gt;='A' && x&lt;='Z');
+}
+main(){
+char s[1001];
+scanf("%[^\n]s",s);
+int i=0,j=strlen(s)-1;
+int flag=1;
+while(i &lt; j){
+	
+	while(i &lt; j && !isAlphabet(s[i]))i++;	
+	while(i &lt; j && !isAlphabet(s[j]))j--;	
+	if(i&gt;=j)
+		break;
+	if( (s[i]==s[j]||abs(s[i]-s[j])==32)) 
+		i++,j--;
+	else{
+		flag=0;
+		break;
+	}
+}
+if(flag)
+	printf("YES\n");
+else
+	 printf("NO\n");
+
+	return 0;
+}
+</pre>

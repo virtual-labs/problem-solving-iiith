@@ -1,0 +1,26 @@
+<pre>
+#include&lt;stdio.h&gt;
+main(){
+	int a,b;
+	scanf("%d%d",&a,&b);
+	/* the positive Rational number
+	   as represented as a/b*/
+
+	while(1){
+		int x = a/b;
+		int y = a-b*x;
+
+		
+		if(!y){                      
+            printf("%d\n",x-1);
+			break;
+		}
+		printf("%d ",x);
+		a = b;
+		b = y;
+
+
+	}
+	return 0;
+}
+</pre>

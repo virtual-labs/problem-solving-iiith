@@ -1,0 +1,31 @@
+<pre>
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+main(){
+int N;
+scanf("%d",&N);
+int *arr=0,*best=0;
+if(N){
+    arr=(int *)malloc(sizeof(int)*N);
+    best=(int *)malloc(sizeof(int)*N);
+}
+
+int longest_length=0,i,j;
+for(i=0;i&lt; N;i++)
+   scanf("%d",arr+i);
+for(i=0;i&lt; N;i++){
+	best[i] = 1;
+	for(j=0;j&lt; i;j++){
+		if(arr[i]&gt; arr[j])
+			best[i] = (best[i]&gt;(best[j]+1))?best[i]:(best[j]+1);
+
+	}
+	if(longest_length&lt;best[i])
+		  longest_length = best[i];
+	
+}
+printf("%d\n",longest_length);
+return 0;	
+}
+	
+</pre>

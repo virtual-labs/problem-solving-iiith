@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>OJ</title>
+		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
+		<script src="jqminmax.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<div id="help-menu">
+			<!--h1> <a href="../help/index.html"> Help </a> </h1-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+	<article id="main_content"> <!--960px limit -->
+		<header id="main-title">
+			<!--h1>OJ ... Happily judging your solution</h1-->
+		</header>
+		<nav id="head-nav">
+					<ul>
+						<li><a href="index.html">Introduction</a></li>
+						<li><a href="theory.html">THEORY</a></li>
+						<!--li><a href="objective.html ">OBJECTIVE</a></li-->
+						<li><a href="lab.html">LAB</a></li>
+						<!--li><a href="quiz.html">QUIZ</a></li-->
+						<!--li><a href="furtherReadings.html">FURTHER READINGS</a></li-->
+					</ul>
+		</nav>
+				<div id="content">
+        <h2>Theory</h2>
+        <p><h3>Problem 1</h3>
+<pre>
+This is a fairly straight-forward problem. We have to determine the length of the longest subsequence in which all the elements are smaller than the previous ones. It is easy to see that each of these decresing subsequences will end either when the current number is bigger than the previous number, or when the current number is the final number in the sequence. Also, the end of one sequence marks the beginning of another sequence. So, this problem is easy to
+solve if we can note down the lengths of these sequences and find the largest number in them. All this can be done while the input is being read. You just ne
+ed to keep track of the length of the current sequence and the length of the largest sequence which has been seen till now. As discussed earlier, if the curr
+rent number is lesser than the previous number then the length of the current sequence is incremented by 1, and if the current number is greater than the pre
+vious number, then the current sequnce ends and we check whether its length is the greatest that has been seen till now, and we also start a new sequence with length equal to 1. When, then input sequence ends then also the current sequence is deemed as terminated, and we again check its length against the length of the largest sequence seen till now.
+
+</pre>       
+</p>
+<p><h3>Problem 2</h3>
+<pre>
+	This is a very famous problem.Its known as longest increasing subsequence problem.Let us consider a
+	naive approach of solving this problem. For every subsequence if it is a increasing subsequence we 
+	try to update the maximum length of the longest increasing subsequence.If we analyse the time complexity
+	of this appraoch it is clear that it is goin to take 2^N * N operations.So if N = 30 , this approach would
+	take 32212254720 (~3*10^11) operations.Looking at the constraints it is obvious that this algorithm is not feasible.
+	Now we look at the standard solution.You may refer wikipedia for the same.
+	
+	Every subsequence has to end with some element of the sequence. So we calculate the length of the longest 
+	incresing subsequence subject to the constraint that the subsequence ends with seq[i].Lets say that it is 
+	best[i]. The answer will be max(best[0],best[1],...,best[N-1]).
+	<h4>Recursive formulation </h4>
+		Now the task is to find a recursive formula for best[i]. Assume we know the values of best[0],best[1],...,
+		best[i-1] and now out task is to find best[i]. Seq[i] can form a increasing subsequence with some Seq[j]
+		if Seq[i] &gt Seq[j] and j &lt i. Thus the recusive formula is 
+		<b> best[i] = max(1,best[j]+1|j&lt i && Seq[i]>Seq[j]) </b>
+</pre>					
+
+
+				</div>
+			</article>
+			<div id="footer">
+			<!---GPL License . Designed By <a href="http://students.iiit.ac.in/~rajatgoel">Rajat Goel</a> -->
+			</div>
+		</div>
+	</body>
+</html>

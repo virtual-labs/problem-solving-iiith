@@ -1,0 +1,17 @@
+<pre>
+#include&lt; stdio.h&gt;
+
+main(){
+
+->scan the input strings
+->declare the output string
+
+->for i= strlen(str1)-1,j=strlen(str2)-1; i&gt;=0||j&gt;=0 ;i--,j--
+	
+	->value1 = (i&gt;=0)?str1[i]-'0':0
+	->value2 = (j&gt;=0)?str2[j]-'0':0
+	->output[k++] = (value1+value2+carry)%10;
+	->carry = (value1+value2+carry)/10;
+	
+}
+</pre>

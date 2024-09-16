@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>OJ</title>
+<!--		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/> -->
+	        <link href="../css/common.css" rel="stylesheet" type="text/css" media="screen" />
+       		<link href="../css/style.css" rel="stylesheet" type="text/css" media="screen" />
+	        <script type="text/javascript" src="../js/jquery-1.4.2.min.js"></script>
+	        <link href="../css/prettify.css" type="text/css" rel="stylesheet" />
+	        <script type="text/javascript" src="../colorjs/prettify.js"></script>
+
+<!--		<script src="jqminmax.js" type="text/javascript"></script> -->
+	</head>
+	<body>
+		<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<div id="help-menu">
+			<!--h1> <a href="../help/index.html"> Help </a> </h1-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+	<article id="main_content"> <!--960px limit -->
+		<header id="main-title">
+			<!--h1>OJ ... Happily judging your solution</h1-->
+		</header>
+		<nav id="head-nav">
+					<ul>
+						<li><a href="index.html">Introduction</a></li>
+						<li><a href="theory.html">THEORY</a></li>
+						<!--li><a href="objective.html ">OBJECTIVE</a></li-->
+						<li><a href="lab.html">LAB</a></li>
+						<!--li><a href="quiz.html">QUIZ</a></li-->
+						<!--li><a href="furtherReadings.html">FURTHER READINGS</a></li-->
+					</ul>
+		</nav>
+				<div id="content">
+        <h2>Theory</h2>
+        <p><h3>Problem 1</h3>
+<pre>
+<p>
+        Let us try to find how many binary numbers can be generated when you are given a fixed number of bits,say n.
+        n=1
+        0,1
+        n=2
+        00,01,10,11
+        n=3
+        000,001,010,011,100,101,110,111
+        etc.
+
+        It can be seen easily by the multiplication principle that for n bits this number is 2^n. One of these number corresponds to the 0 in decimal, so the biggest number possible is 2^n - 1. Therefore, given a number, say N, it can fit in n bits if N is less than 2^n. Hence, the number of bits required to fit a number N is equal to ceil(log2(N)). Now finding ceil(log2(N)) can be done easily by repeatedly dividing the given number, N, by two until you get 0 as the quotient. For example, let N=96
+
+        Then,
+        Step 1 :96/2 gives quotient as 48
+        Step 2 :48/2 gives quotient as 24
+        Step 3 :24/2 gives quotient as 12
+        Step 4 :12/2 gives quotient as 6
+        Step 5 :6/2 gives quotient as 3
+        Step 6 :3/2 gives quotient as 1
+        Step 7 :1/2 gives quotient as 0
+
+        So, ceil(log2(96)) is 6 because doing division on the 7th time gave a zero as the quotient. Therefore, the minimum number of bits required to fit 96 is 6.
+
+
+
+</p>       
+</p>
+
+</pre>       
+</p>
+<p><h3>Problem 2</h3>
+<pre>
+	Lets start with an example. Consider the sample input , the given characters are A,B,C and the input string is AC.
+	Assume we are traversing the input string from left to right, say initially we are at 0<sup>th</sup> position. 
+	If instead of 'A' suppose B was present, then all the strings which would start with A would come first than B right.
+	Thus the number of strings which come before BC would No_strings which start with A + No_strings which start with B before BC.
+	But luckily we have initial letter as A. 
+	Now the 1<sup>st</sup> character is 'C' , thus we need to count all the strings which start with AB.
+	If instead of 'C' there was a D, then we would have to count the number of strings starting with AB , AC.In this manner 
+	we proceed adding the requisite number of strings to our result.   
+</pre>					
+
+
+				</div>
+			</article>
+			<div id="footer">
+			<!---GPL License . Designed By <a href="http://students.iiit.ac.in/~rajatgoel">Rajat Goel</a> -->
+			</div>
+		</div>
+	</body>
+</html>

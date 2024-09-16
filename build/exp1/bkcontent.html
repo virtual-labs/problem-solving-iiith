@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head></head>
+<h1 id="main-title">
+Experiment 1
+</h1>
+
+<div id="introduction"> 
+<h2>Introduction </h2> 
+<p> 
+How are number represented in C? In this lab we help you understand how numbers are repsented in C and based on that two problems are given.The 1<sup>st</sup> is simple to solve while the second one is little tricky.
+</p>
+<ol>
+<li><h2>Problem 1:</h2>
+<p> 
+Given a positive integer (&lt= 1000000), find the minimum number of bits required to represent it as binary number.
+</p>
+<br><hr />
+<b>Input Specification</b><br />
+<p>
+Input contains a single positive integer(&lt 10<sup>6</sup>).
+</p>
+<br><hr />
+<b>Output Specification</b><br />
+<p>
+Output the minimum number of bits required for the representing in binary.
+</p>
+<br><hr />
+<b>Sample Input and Output</b><br />
+Input: 4<br />
+Output:3<br />
+Input: 16 <br />
+Output: 5<br/>
+<br><hr />
+<br>
+</li>
+
+<li><h2>Problem 2:</h2>
+<p> 
+Given N(&lt=26) followed by N distinct characters, we can find all possible 2<sup>N</sup> words (sequence of characters) which preserve the ordering in the input (assuming that all words are valid words in the language). For example, if N is 3 and chatacters are A, B and C, the words in the alphabet order are A, AB, ABC, AC, B, BC and C. Your task now, is to find the index of the word in the dictionary. i.e., if input is AC, output is 4. You may avoid generating all the words and comparing the word with every word in the dictionary.
+
+</p>
+<br><hr />
+<b>Input Specification</b><br />
+<p>
+Input contains a number N representing the number of alphabets(&lt=26) followed by a space and N characters in the dictionary listed in lexicographic order and then a valid word present in dictionary.
+</p>
+<br><hr />						
+<b>Output Specification</b><br />
+<p>
+Output must be the index of the word in the dictionary.
+</p>
+<br><hr />
+<b>Sample Input and Output</b><br />
+Input: 3 A B C AC <br />
+Output: 4<br />
+Input: 3 A B C BC<br />
+Output: 6<br/>
+<br><hr />
+</li>
+</div> 
+
+<div id="theory"> 
+<h2>Theory</h2> 
+<h3>Problem 1</h3>
+<p>
+Let us try to find how many binary numbers can be generated when you are given a fixed number of bits,say n.<br>
+n=1, gives<br>
+0,1<br>
+n=2, gives<br>
+00,01,10,11
+n=3, gives<br>
+000,001,010,011,100,101,110,111<br>
+etc.<br>
+</p>
+<p>
+It can be seen easily by the multiplication principle that for n bits this number is 2<sup>n</sup>. One of these number corresponds to the 0 in decimal, so the biggest number possible is 2<sup>n</sup> - 1. Therefore, given a number, say N, it can fit in n bits if N is less than 2^n. Hence, the number of bits required to fit a number N is equal to ceil(log2(N)). Now finding ceil(log2(N)) can be done easily by repeatedly dividing the given number, N, by two until you get 0 as the quotient. For example, let N=96
+</p>
+<p>
+Then,<br>
+Step 1 :96/2 gives quotient as 48<br>
+Step 2 :48/2 gives quotient as 24<br>
+Step 3 :24/2 gives quotient as 12<br>
+Step 4 :12/2 gives quotient as 6<br>
+Step 5 :6/2 gives quotient as 3<br>
+Step 6 :3/2 gives quotient as 1<br>
+</p>       
+
+<br>
+
+<h3>Problem 2</h3>
+<p>
+Lets start with an example. Consider the sample input, the given characters are A,B,C and the input string is AC. Assume we are traversing the input string from left to right, say initially we are at 0<sup>th</sup> position. If instead of 'A' suppose B was present, then all the strings which would start with A would come first than B, right?
+Thus, the number of strings which come before BC would No_strings which start with A + No_strings which start with B before BC. But luckily we have initial letter as A. Now the 1<sup>st</sup> character is 'C' , thus we need to count all the strings which start with AB. If instead of 'C' there was a D, then we would have to count the number of strings starting with AB, AC. In this manner we proceed adding the requisite number of strings to our result.
+</p>					
+</div> 
+
+<div id="Lab">
+        <h2>Lab</h2>
+        <h3>Manual</h3>
+        <ol>
+        <li> Enter write the code for the problem or unpload a solution. </li>
+        <li> Press the i button get info about the problem which you have to solve.</li>
+        <li> If you are finding it difficult to solve the solution, then you can use the 4 levels of incresingly descriptive hints, but try to use minimum number of hints.</li>
+        <li> Compile the code by pressing the compile button. </li>
+        <li> If code is not compling then correct the error and/or warnings. </li>
+	<li> To execute the code and see output, press the execute button. </li>
+	</ol>
+        <a href="lab.html" target="_blank">Go to Lab (Click here)</a>
+</div>

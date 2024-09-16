@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>OJ</title>
+		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
+		<script src="jqminmax.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<div id="help-menu">
+			<!--h1> <a href="../help/index.html"> Help </a> </h1-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+	<article id="main_content"> <!--960px limit -->
+		<header id="main-title">
+			<!--h1>OJ ... Happily judging your solution</h1-->
+		</header>
+		<nav id="head-nav">
+					<ul>
+						<li><a href="index.html">Introduction</a></li>
+						<li><a href="theory.html">THEORY</a></li>
+						<!--li><a href="objective.html ">OBJECTIVE</a></li-->
+						<li><a href="lab.html">LAB</a></li>
+						<!--li><a href="quiz.html">QUIZ</a></li-->
+						<!--li><a href="furtherReadings.html">FURTHER READINGS</a></li-->
+					</ul>
+		</nav>
+				<div id="content">
+        <h2>Theory</h2>
+        <p><h3>Problem 1</h3>
+<pre>
+	Consider three numbers from the set say a,b,c. If either a+b&lt c or b+c&lt a or c+a&lt b  then (a,b,c) cannot
+	form a triangle.Lets state the problem little differently for each pair (a,b) we want to find out how many 
+	numbers c are there such that a+b &lt c. We consider each pair (a,b) and search for how many numbers are there
+	which are greater than a+b. This can be done easily using binary search. Sort the array and 
+	consider the interval (start,end) . If arr[mid]&gt a+b then (mid-end+1) numbers are greater than a+b 
+	otherwise if arr[mid]&lt a+b then we dont add anything to the result and search in (start,mid-1). 
+</pre>       
+</p>
+<p><h3>Problem 2</h3>
+	Consider the given string. We need to find the smallest substring which contains all the characters of the given set.
+	Any substring which qualifies has to end with some  character.For each index in the input string lets find out how much
+	we have to extend from that point to the left so that we get all the characters in the input set. Lets say we are 
+	scanning the string from the left and we know the latest occurrences of the characters of input set in the input string,
+	say they are stored in an array by name pos[]. From the i<sup> th</sup> character we need to extend to the minimum
+	value in the pos[] array so that we get all the characters. For each index i we do this and report the minimum length.
+
+<pre>
+
+</pre>					
+
+
+				</div>
+			</article>
+			<div id="footer">
+			<!---GPL License . Designed By <a href="http://students.iiit.ac.in/~rajatgoel">Rajat Goel</a> -->
+			</div>
+		</div>
+	</body>
+</html>

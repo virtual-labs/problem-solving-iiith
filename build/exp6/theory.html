@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>OJ</title>
+		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
+		<script src="jqminmax.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<div id="help-menu">
+			<!--h1> <a href="../help/index.html"> Help </a> </h1-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+	<article id="main_content"> <!--960px limit -->
+		<header id="main-title">
+			<!--h1>OJ ... Happily judging your solution</h1-->
+		</header>
+		<nav id="head-nav">
+					<ul>
+						<li><a href="index.html">Introduction</a></li>
+						<li><a href="theory.html">THEORY</a></li>
+						<!--li><a href="objective.html ">OBJECTIVE</a></li-->
+						<li><a href="lab.html">LAB</a></li>
+						<!--li><a href="quiz.html">QUIZ</a></li-->
+						<!--li><a href="furtherReadings.html">FURTHER READINGS</a></li-->
+					</ul>
+		</nav>
+				<div id="content">
+        <h2>Theory</h2>
+        <p><h3>Problem 1</h3>
+<pre>
+	        Recursion can be applied to a problem if the problem for the given input can be expressed as dependent upon the solution of the same problem for simpler inputs. One has to hardcode the solution for some simple cases, so that this recursion does not go on endlessly. Now, the given problem of expressing a weight(W) as a sum of other weights can be expressed as the problem of choosing one weight(w) such that it is not greater than W and then solving the same problem for the remaining weight W-w. For this particular problem, the solution can be expressed easily by choosing all the possible multiples(m) of a given unit, 2^(i),   iteratively for all the values of m for which m*2^(i) is less than W, and subsequently solving the same problem for the remaining weight, W-w, and for multiples of weights for higher order. So, our recursion function would be needing 2 variable, one signifying multiples of which order of weight should be used this time and other signifying remaining weight to be accrued.
+
+</pre>       
+</p>
+<p><h3>Problem 2</h3>
+<pre>
+	Let us assume we have kept weight D on left pan. From amongst the N weights you can choose to keep 
+	some weights on left side and some weights on right side and we may not use some weights at all.
+	Lets say we keep a total weight of w1 on left side and w2+D on right pan, then for balancing 
+	w1=w2+D.We keep track the difference between the two pans and if at any stage the difference of 
+	weights between two pans is 0 we report yes. Consider the i<sup>th </sup>weight and suppose the 
+	current difference between left pan and right pan is x.
+	If x is 0 then yes we donot choose any weight and thus return 1.
+	Otherwise we have three options
+	<br>
+	<h5>Option1:</h5>
+		Put the i<sup>th</sup> weight on right pan.In which case the difference between left and right
+		pan becomes x - weight[i].
+	<h5>Option2:</h5>
+		Put the i<sup>th</sup> weight on left pan.In which case the difference between left and right
+		pan becomes x + weight[i].
+	<h5>Option3:</h5>
+		Donot put the i<sup>th</sup> weight on either pan.In which case the difference between left and right
+		pan remains x.
+	
+	<h4> Recursive Function </h4>
+		Let F(i,x)  denotes whether it is possible to obtain a difference of x using the weights 
+		w[i],w[i+1],...,w[n-1].
+		Obviously F(i,0) is 1.Otherwise  
+		F(i,x) = F(i+1,x)||F(i+1,x-w[i])||F(i+1,x+w[i]);
+
+		F(i+1,x) corresponds to Option3.
+		F(i+1,x-w[i]) corresponds to Option1.
+		F(i+1,x+w[i]) corresponds to Option2.
+</pre>					
+
+
+				</div>
+			</article>
+			<div id="footer">
+			<!---GPL License . Designed By <a href="http://students.iiit.ac.in/~rajatgoel">Rajat Goel</a> -->
+			</div>
+		</div>
+	</body>
+</html>

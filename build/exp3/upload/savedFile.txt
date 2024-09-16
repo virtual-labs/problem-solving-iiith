@@ -1,0 +1,1 @@
+!$!include< stdio.h >int main(){int a = 5;int b = 10;int i,c=1;for(i = a ; i <= b ; i  ){c = c*i;}printf("%d\n",c);}

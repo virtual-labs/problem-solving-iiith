@@ -1,0 +1,22 @@
+<pre>
+#include&lt; stdio.h&gt;
+main(){
+->declare and scan N
+-> declare an array of size N 
+   and scan the array
+ ->declare an auxiliary array of
+   size of N to implement the 
+   recursive formula
+  for i=0 to N
+	  ->Initialise best[i]
+	  for j=0 to i-1
+		if arr[i]&lt;arr[j]
+			best[i] = max(best[i],best[j]+1)
+	  ->Try to update the answer
+ ->Implement the recursive formula
+   in the theory and report the 
+   length of the longest increasing 
+   subsequence 
+}
+	
+</pre>

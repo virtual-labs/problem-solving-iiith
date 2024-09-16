@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>OJ</title>
+		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
+		<script src="jqminmax.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<header id="site_head">
+		<div class="header_cont"> <!-- 960px header-->
+			<!-- LOGO of the company-->
+			<div id="logo">
+			<h1> <a href="index.html"> Virtual Labs </a> </h1>
+			</div>
+			<div id="help-menu">
+			<!--h1> <a href="../help/index.html"> Help </a> </h1-->
+			</div>
+		</div>
+			<!-- Menu -->
+	</header>
+	<article id="main_content"> <!--960px limit -->
+		<header id="main-title">
+			<!--h1>OJ ... Happily judging your solution</h1-->
+		</header>
+		<nav id="head-nav">
+					<ul>
+						<li><a href="index.html">Introduction</a></li>
+						<li><a href="theory.html">THEORY</a></li>
+						<!--li><a href="objective.html ">OBJECTIVE</a></li-->
+						<li><a href="lab.html">LAB</a></li>
+						<!--li><a href="quiz.html">QUIZ</a></li-->
+						<!--li><a href="furtherReadings.html">FURTHER READINGS</a></li-->
+					</ul>
+		</nav>
+				<div id="content">
+        <h2>Theory</h2>
+        <p><h3>Problem 1</h3>
+<pre>
+If numbers are to big to fit into standard data types, then we can use strings to store the number. In this case, addition of two number would require doing digit by digit addition along with required carry over getting transferred to the next higher order cell.
+        Lets suppose that the longer of two of the input numbers is of length L. Then the size of the result would be at maximum L+1. Now, for doing addition, you need to place two separate indices at the end of the two numbers annd do an addition of the two digits there. Beware that the two digits are stored in character format, so subtract 10 from each of them before adding them. If this addition results in a number greater than 10, then write down the unit digit of the result in right most cell of the result string and note down the carry forward. If the result of the addition is less than then then no need to worry about the carry forward. Now repeat this process by having moved all the three indices one place to the left, and keep repeating till the longer of the two numbers is traversed. If one of the input number runs out of digits then assume it to be supplying 0. Finally, output the result string on the screen.
+
+</pre>       
+</p>
+<p><h3>Problem 2</h3>
+<pre>
+	A number x is said to be a square root of N if x*x=N.Thus is it quite obvious that the square root a positive 
+	integer&gt1 lies in between [1 N]. Suppose P is a number such that P*P&gt N then the result must be in the interval 
+	[1 P-1] oterwise if P*P&lt N then the result lies in [P+1 N]. We use this idea to find the square root of a positive
+	integer. Suppose we know that the square root lies in between (start,end).If mid = (start+end)/2.0, depending 
+	upon the value of mid*mid-N we chose either (mid+1,end) or (start,mid-1) as our next search interval
+	or conclude that mid is the square root of N.While coding do take care of the fact of precision since 
+	mid*mid may not be exactly equal N. 
+	<h4>Time complexity</h4>
+		If you analyze the number of operations it takes this function to run it is easy to see that 
+		it will take logN (logN to base 2) operations. At every step of the search we chose either 
+		(start,mid-1) or (mid+1,end) which means the interval size gets reduced by half.Initially 
+		the range is N, in the next step it will become N/2 , then N/4,...and so after x steps the search
+		range will be N/(2^x) which will be 1 when x is logN.So the number of iterations is logN. 
+	
+</pre>					
+
+
+				</div>
+			</article>
+			<div id="footer">
+			<!---GPL License . Designed By <a href="http://students.iiit.ac.in/~rajatgoel">Rajat Goel</a> -->
+			</div>
+		</div>
+	</body>
+</html>

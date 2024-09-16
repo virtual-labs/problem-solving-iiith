@@ -1,0 +1,21 @@
+<pre>
+#include&lt;stdio.h&gt;
+int no_ways(int W,int index){
+
+	->termination conditions
+	
+	int ans = 0;
+	for i=0;i*2^index&lt;=W;i++
+		->choosing i items each
+		  of weight 2^index
+	 	ans+=no_ways(W-i*2^index,index+1)
+
+	->return ans
+	
+}
+main(){
+->scan N,W 
+->call the recursive function with appropriate
+  parameters
+}
+</pre>

@@ -1,0 +1,23 @@
+<pre>
+#include&lt;stdio.h&gt;
+int func(int N,int *weight,int S)
+{
+
+->Handle termination cases
+
+if(!S)
+	return 1;
+if(!N)
+	return 0;
+else
+	return func(N-1,weight,S-weight[N-1])+func(N-1,weight,S); 
+}
+
+main(){
+->scan the input
+->call the function with 
+  appropriate parameters
+}
+
+
+</pre>

@@ -1,0 +1,167 @@
+<html>
+
+<head>
+<title>JavaScriptKit.com Multiple Choice Quiz Script</title>
+
+<style>
+.qheader{
+font:bold 14px Arial;
+}
+
+.qselections{
+font:normal 13px Arial;
+}
+</style>
+
+<script src="quizconfig.js">
+</script>
+
+<script>
+
+/***********************************************
+* JavaScriptKit.com Multiple Choice Quiz Script (http://www.javascriptkit.com)
+* Copyright 2003 JavaScript Kit- http://www.javascriptkit.com
+* This notice and footnote must stay intact for use
+* Visit JavaScript Kit (http://www.javascriptkit.com/) for full source code
+***********************************************/
+
+var actualchoices=new Array()
+document.cookie="ready=yes"
+</script>
+
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<!--Comments on configuring quiz script-->
+<!--Change the questions below any way you want, but make note of the following:-->
+<!--1) Perserve the <FORM> tags -->
+<!--2a) Inside each radio button, use the VALUE attribute to denote each question's choices: "a", "b", "c" etc.-->
+<!--2b) Inside each radio button, use the NAME attribute to denote which question the button belongs to ("question1", "question2" etc-->
+<!--3) Script supports unlmited # of questions. Be sure to edit .js file to enter corresponding solutions-->
+
+<p align="center">
+
+<form method="POST" name="myquiz">
+
+<font face="Arial"><big><big>General Knowledge Quiz</big></big></font></p>
+
+<div class="qheader">
+1) A do-while loop is useful when we want that the statements within the loop must be executed</div>
+<div class="qselections">
+<input type="radio" value="a" name="question1">a) aaa.<br>
+<input type="radio" value="b" name="question1">b) bbb<br>
+<input type="radio" value="c" name="question1">c) cc<br>
+<input type="radio" value="d" name="question1">d) dd<br>
+</div>
+
+<br>
+
+<div class="qheader">
+2) What is the world's most common religion?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question2">a) Christianity<br>
+<input type="radio" value="b" name="question2">b) Buddhism<br>
+<input type="radio" value="c" name="question2">c) Hinduism<br>
+<input type="radio" value="d" name="question2">d) Muslim<br>
+</div>
+
+<br>
+
+<div class="qheader">
+3) Which city ranks as the world's most populous city (2002)?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question3">a) New York (US)<br>
+<input type="radio" value="b" name="question3">b) Mexico City (Mexico)<br>
+<input type="radio" value="c" name="question3">c) Tokyo (Japan)<br>
+<input type="radio" value="d" name="question3">d) Shanghai (China)<br>
+</div>
+
+<br>
+
+<div class="qheader">
+4) What is the second largest country (in size) in the world?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question4">a) USA<br>
+<input type="radio" value="b" name="question4">b) China<br>
+<input type="radio" value="c" name="question4">c) Canada<br>
+<input type="radio" value="d" name="question4">d) Russia<br>
+</div>
+
+<br>
+
+<div class="qheader">
+5) As of January 2003, how much is Microsoft Chairman Bill Gates's net worth?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question5">a) 10 million US<br>
+<input type="radio" value="b" name="question5">b) 10 billion US<br>
+<input type="radio" value="c" name="question5">c) 35 billion US<br>
+<input type="radio" value="d" name="question5">d) 50 billion US<br>
+</div>
+
+<br>
+
+<div class="qheader">
+6) Which country below is not one of the members of the UN security council (Jan 2003)?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question6">a) USA<br>
+<input type="radio" value="b" name="question6">b) China<br>
+<input type="radio" value="c" name="question6">c) Germany<br>
+<input type="radio" value="d" name="question6">d) France<br>
+</div>
+
+<br>
+
+<div class="qheader">
+7) The longest river in the world is:</div>
+<div class="qselections">
+<input type="radio" value="a" name="question7">a) Amazon (Brazil)<br>
+<input type="radio" value="b" name="question7">b) Nile (Egypt)<br>
+<input type="radio" value="c" name="question7">c) Yangtze (China)<br>
+<input type="radio" value="d" name="question7">d) Congo (Zaire)<br>
+</div>
+
+<br>
+
+<div class="qheader">
+8) Which software firm is the second largest in the world, after Microsoft?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question8">a) Netscape<br>
+
+<input type="radio" value="b" name="question8">b) Oracle<br>
+<input type="radio" value="c" name="question8">c) Lotus<br>
+<input type="radio" value="d" name="question8">d) Norton<br>
+</div>
+
+<br>
+
+<div class="qheader">
+9) What's the world's most widely spoken language?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question9">a) English<br>
+<input type="radio" value="b" name="question9">b) Spanish<br>
+<input type="radio" value="c" name="question9">c) Mandarin<br>
+<input type="radio" value="d" name="question9">d) French<br>
+</div>
+
+<br>
+
+<div class="qheader">
+10) Which continent is host to the most countries in the world?</div>
+<div class="qselections">
+<input type="radio" value="a" name="question10">a) Asia<br>
+<input type="radio" value="b" name="question10">b) Africa<br>
+<input type="radio" value="c" name="question10">c) Europe<br>
+</div>
+
+</form>
+
+<form>
+<div align="center">
+<input type="button" value="Grade Me!" name="B1" onClick="gradeit()"> <input type="button" value="Reset" name="B2" onClick="document.myquiz.reset()"></div>
+</form>
+
+<p id="footnote" align="center"><font face="arial" size="-1">Quiz script provided by<br>
+<a href="http://www.javascriptkit.com">JavaScriptKit.com</a></font></p>
+</body>
+</html>

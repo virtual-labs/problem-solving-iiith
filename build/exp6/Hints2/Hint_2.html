@@ -1,0 +1,21 @@
+<pre>
+#include&lt;stdio.h&gt;
+
+->Assume a weight of D on right PAN
+int isPossible(int N,int D,int *weight){
+	-> Trivial/termination cases handled first
+	   like when N=0 or D=0
+	-> Explore the possibilities 
+	   keeping weight on right side of PAN 
+		   ->isPossible(N-1,D+weight[N-1],weight)
+	   keeping the weight on left side of PAN
+	    	   ->isPossible(N-1,D-weight[N-1],weight)
+	   Not keeping the weight on any PAN
+	           ->isPossible(N-1,D,weight)
+}
+
+main(){
+	->scan N and weights and call isPossible
+	  function
+}
+</pre>

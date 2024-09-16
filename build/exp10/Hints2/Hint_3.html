@@ -1,0 +1,21 @@
+<pre>
+#include&lt; stdio.h&gt;
+main(){
+->declare and scan N
+-> declare an array of size N 
+   and scan the array
+ ->declare an auxiliary array of
+   size of N to implement the 
+   recursive formula
+  int longest_length=0;
+  for i=0 to N
+	  best[i]=1
+	  for j=0 to i-1
+		if arr[i]&lt;arr[j]
+			best[i] = max(best[i],best[j]+1)
+	  if(longest_length&lt;best[i])
+		  longest_length = best[i];
+  print longest_length;
+}
+	
+</pre>

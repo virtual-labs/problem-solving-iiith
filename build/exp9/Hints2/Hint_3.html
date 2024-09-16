@@ -1,0 +1,29 @@
+<pre>
+#include&lt;stdio.h&gt;
+int no_ways(int index,int index_needed_achieved,int *weight,int curr_sum){
+
+->termination 
+	if(index==N)
+		return weight[index_needed_achieved]==curr_sum;
+
+if(index==index_needed_achieved)
+		return no_ways(index+1,index_needed_achieved,weight,curr_sum);
+
+->Option1:
+	include weight[index] in set of weights
+	and do a recursive with the corresponding
+	paramters
+	->no_ways(index+1,index_needed_achieved,weights,curr_sum+weights[index]);
+->Option2:
+	exclude weight[index] in set of weights
+	and do a recursive with the corresponding 
+	paramters
+	->no_ways(index+1,index_needed_achieved,weights,curr_sum);
+}
+main(){
+->declare N and scan N weights 
+-> for each weight in input find in how 
+   many ways can you achieve it
+}
+	
+</pre>
