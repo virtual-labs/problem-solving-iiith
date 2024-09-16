@@ -1,5 +1,8 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 
 int isPossible(int N,int D,int *weight){
 	if(!N)
@@ -7,17 +10,18 @@ int isPossible(int N,int D,int *weight){
   	return isPossible(N-1,D+weight[N-1],weight)||isPossible(N-1,D-weight[N-1],weight)||isPossible(N-1,D,weight);
 }
 
-main(){
+int main(){
 	int N;
-	scanf("%d",&N);
+	scanf("%d",&amp;N);
 	int weights[N],i,D;
 	for(i=0;i&lt;N ;i++){
 		scanf("%d",weights+i);
 	}
-	scanf("%d",&D);
+	scanf("%d",&amp;D);
 	if(isPossible(N,D,weights))
 		puts("YES");
 	else
 		puts("NO");
 }
 </pre>
+</body></html>

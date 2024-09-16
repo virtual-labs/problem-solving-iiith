@@ -1,12 +1,15 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 #include&lt;string.h&gt;
 
-main(){
+int main(){
 	int N;
 	char str[1000001];
 	scanf("%s",str);
-	scanf("%d",&N);
+	scanf("%d",&amp;N);
 	if(!N)
 	{
 		printf("0\n");
@@ -15,7 +18,7 @@ main(){
 	int i,j;
 	char input_char[N];
 	for(i=0;i&lt; N;i++){
-		scanf(" %c",&input_char[i]);
+		scanf(" %c",&amp;input_char[i]);
 	}
 	
 	int pos[N];
@@ -34,7 +37,7 @@ main(){
 			if(minValue &gt;  pos[j])
 				minValue = pos[j];
 
-		if(minValue!=-1 && minLength&gt; (i-minValue+1)){
+		if(minValue!=-1 &amp;&amp; minLength&gt; (i-minValue+1)){
 			minLength = i-minValue+1;
 		}
 
@@ -48,3 +51,4 @@ main(){
 	return 0;
 }
 </pre>
+</body></html>

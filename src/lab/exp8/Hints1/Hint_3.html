@@ -1,22 +1,26 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 #include&lt;stdlib.h&gt;
 int search(int *arr,int start,int end,int num){
-	->termination condition
+	-&gt;termination condition
 	int mid = (start+end)&gt;&gt;1;
 	if(arr[mid]&gt; num)
 		return (end-mid+1)+search(arr,start,mid-1,num);
 	else
 		return search(arr,mid+1,end,num);
 }
-main(){
-	->declare and scan N
-	->declare and scan the array
-	->sort the array
-	->for(i=0;i&lt; N;i++)
+int main(){
+	-&gt;declare and scan N
+	-&gt;declare and scan the array
+	-&gt;sort the array
+	-&gt;for(i=0;i&lt; N;i++)
 		for(j=i+1;j&lt; N;j++)
 			ans+=search(arr,0,N-1,arr[i]+arr[j]);
 
-	->print the final answer
+	-&gt;print the final answer
 }
 </pre>
+</body></html>

@@ -1,5 +1,8 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 int func(int N,int *weight,int S){
 	if(!S)// If target weight has been achieved, we have found a solution.
 		return 1;
@@ -11,15 +14,15 @@ int func(int N,int *weight,int S){
            */
 	return func(N-1,weight,S-weight[N-1])+func(N-1,weight,S); 
 }
-main(){
+int main(){
 	int N;
-	scanf("%d",&N);
+	scanf("%d",&amp;N);
 	int weight[N],i;
 	// Weight array stores the respective weights
 	for(i=0;i&lt;N ;i++)
 		scanf("%d",weight+i);
 	int Sum;
-	scanf("%d",&Sum);
+	scanf("%d",&amp;Sum);
 	int no_ways = func(N,weight,Sum);
 	if(!no_ways)
 		no_ways = -1;
@@ -28,3 +31,4 @@ main(){
 }
 
 </pre>
+</body></html>

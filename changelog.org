@@ -1,0 +1,21 @@
+#+NAME: Changelog
+
+* <2020-07-03 Fri>
+
+  - Author :: Ojas Mohril
+  - Changes ::
+    - Updated makefile =patch-analytics= command to use
+      =scripts/patch-analytics.sh= instead of the script
+      from [[https://github.com/virtual-labs/vlabs-analytics][vlabs-analytics]].
+    - This script is taken from the [[https://github.com/virtual-labs/vlabs-analytics][vlabs-analytics]] repo but updated
+      to ignore =content*.html= files.  Justification for why this is
+      needed can be found in [[https://github.com/virtual-labs/problem-solving-iiith/issues/1213][this]] issue.  (In brief, content*.html
+      files are not really html and break when touched by the
+      analytics code.)
+    - As a result of this change, the submission files will no longer
+      have analytics snippet and these page views will not be tracked.
+    - Removed all committed submission*.html files and added the
+      pattern to gitignore.  These are radomly generated files and
+      should not be added to version control.
+    - As the broken content files were comitted at some point on the
+      master, the working files had to extracted from [[https://github.com/virtual-labs/problem-solving-iiith/commit/591c7f3c91d260a9a0ef12385c62be3b63577e44][this]] commit.

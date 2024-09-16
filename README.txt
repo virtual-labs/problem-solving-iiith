@@ -99,4 +99,3 @@ Go to Command Terminal
 	 $ make theme=blue-icon
 
 * Now, open ui/build/index.html in the browser to test the template.
-

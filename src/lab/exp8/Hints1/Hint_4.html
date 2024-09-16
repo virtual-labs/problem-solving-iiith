@@ -1,5 +1,8 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 #include&lt;stdlib.h&gt;
 int compare(const void *a,const void *b){
 	return *((int *)a)&gt;*((int *)b);
@@ -13,9 +16,9 @@ int search(int *a,int start,int end,int num){
 	else
 		return search(a,mid+1,end,num);
 }
-main(){
+int main(){
 	int N;
-	scanf("%d",&N);
+	scanf("%d",&amp;N);
 	int arr[N];
 	int i,j;
 	for(i=0;i&lt; N;i++)
@@ -29,3 +32,4 @@ main(){
 	return 0;
 }
 </pre>
+</body></html>

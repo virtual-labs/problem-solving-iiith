@@ -1,18 +1,22 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
 #include&lt;string.h&gt;
 #include&lt;math.h&gt;
 int isAlphabet(char x){
 }
-main(){
+int main(){
 char str[1001];
 gets(str);
 int i=0,j=strlen(str)-1;
 int flag=1;
 while(i &lt; j){
 	
-	while(i &lt; j && !isAlphabet(s[i]))i++;	
-	while(i &lt; j && !isAlphabet(s[j]))j--;	
+	while(i &lt; j &amp;&amp; !isAlphabet(s[i]))i++;	
+	while(i &lt; j &amp;&amp; !isAlphabet(s[j]))j--;	
 
 	if(i&gt;=j)
 		break;
@@ -26,3 +30,4 @@ while(i &lt; j){
 	return 0;
 }
 </pre>
+</body></html>

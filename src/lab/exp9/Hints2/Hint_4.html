@@ -1,5 +1,8 @@
-<pre>
-#include&lt;stdio.h&gt;
+<html><head>
+	
+</head>
+<body>
+	<pre>#include&lt;stdio.h&gt;
 int N;
 int no_ways(int index,int index_needed_achieved,int *weights,int curr_sum){
 
@@ -14,9 +17,9 @@ int b=no_ways(index+1,index_needed_achieved,weights,curr_sum);
 return a+b;
 
 }
-main(){
+int main(){
 int i;
-scanf("%d",&N);
+scanf("%d",&amp;N);
 int weights[N];
 for(i=0;i&lt; N;i++)
 	scanf("%d",weights+i);
@@ -28,3 +31,4 @@ return 0;
 }
 	
 </pre>
+</body></html>

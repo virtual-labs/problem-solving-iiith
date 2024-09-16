@@ -1,14 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" >
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!DOCTYPE html><html xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml"><head><!--Google Tag Manager--><!--End Google Tag Manager--><!--Google Tag Manager--><!--End Google Tag Manager-->
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 	<title>EditArea - the code editor in a textarea</title>
-		<link href="default.css" rel="stylesheet" media="screen" type="text/css"/>
-		<link href="thickbox/thickbox.css" rel="stylesheet" media="screen" type="text/css"/>
+		<link href="default.css" media="screen" rel="stylesheet" type="text/css">
+		<link href="thickbox/thickbox.css" media="screen" rel="stylesheet" type="text/css">
 		<script src="jqminmax.js" type="text/javascript"></script>
 		<script src="jquery.js" type="text/javascript"></script>
 		<script src="thickbox/thickbox.js" type="text/javascript"></script>
-	<script language="Javascript" type="text/javascript" src="edit_area/edit_area_full.js"></script>
+	<script language="Javascript" src="edit_area/edit_area_full.js" type="text/javascript"></script>
 	<script language="Javascript" type="text/javascript">
 		// initialisation
 		editAreaLoader.init({
@@ -199,7 +197,7 @@
 </script>
 <!-- Google Analytics script ends here -->
 </head>
-<body>
+<body><!--Google Tag Manager (noscript)--><!--End Google Tag Manager (noscript)--><!--Google Tag Manager (noscript)--><!--End Google Tag Manager (noscript)-->
 		<header id="site_head">
 		<div class="header_cont"> <!-- 960px header-->
 			<!-- LOGO of the company-->
@@ -220,11 +218,11 @@
 <div id="content">
 <div id="contentLeft">
 <span>
-<form id="file_upload_form" name="file_upload_form" method="post" enctype="multipart/form-data" action="upload.php">
+<form action="upload.php" enctype="multipart/form-data" id="file_upload_form" method="post" name="file_upload_form">
 CHOOSE FILE TO LOAD: 
-<input name="file" id="file" size="20" type="file" />&nbsp;
-<input type="submit" name="action" value="Upload" style="display:none;"/><br>
-<span style="font-size:12px;">After browsing the file, click on load button (Last button in the menu bar of edit area, looks like <img src="load.gif"/>) </span>
+<input id="file" name="file" size="20" type="file">&nbsp;
+<input name="action" style="display:none;" type="submit" value="Upload"><br>
+<span style="font-size:12px;">After browsing the file, click on load button (Last button in the menu bar of edit area, looks like <img src="load.gif">) </span>
 <iframe id="upload_target" name="upload_target" src="" style="width:0;height:0;border:0px solid #fff;"></iframe>
 </form>
 </span>
@@ -235,31 +233,30 @@ CHOOSE FILE TO LOAD:
 
 <form action="judge.py" method="get" name="judge">
 <fieldset>
-		<textarea id="editArea" style="height: 400px; width: 100%;" name="code">
-		</textarea>
+		<textarea id="editArea" name="code" style="height: 400px; width: 100%;">		</textarea>
 	</fieldset>
 Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;ProblemNo
 
 <br>
-<select name="language" id="codeId">
+<select id="codeId" name="language">
 <option value="c"> C (gcc 4.3.2) </option>
 <option value="cpp"> C++ (g++ 4.3.2) </option>
 </select>
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<select name="codeId"  id="probId" >
+<select id="probId" name="codeId">
 <option value="Problem1"> 1  </option>
 <option value="Problem2"> 2  </option>
 </select>
-<a href="prob_desc.html?height=500&width=650" class="thickbox"><img src="images/info.jpg" height=20px width=20px></a>
-<input type="hidden" name="hintC" id="hintCount" value="0"/>
+<a class="thickbox" href="prob_desc.html?height=500&amp;width=650"><img height="20px" src="images/info.jpg" width="20px"></a>
+<input id="hintCount" name="hintC" type="hidden" value="0">
  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
- <input type="submit" value="Compile" name="type"/>
+ <input name="type" type="submit" value="Compile">
  &nbsp; &nbsp; &nbsp; 
- <input type="submit" value="Run" name="type"/>
- <input type="hidden" value="0" name="highHint" id="highHint_id"/>
-</div> <!--contentLeft -->
+ <input name="type" type="submit" value="Run">
+ <input id="highHint_id" name="highHint" type="hidden" value="0">
+</form></div> <!--contentLeft -->
 
 <div id="contentRight">
    <h4> HINTS </h4><br>
@@ -268,13 +265,13 @@ Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &
    </div>
    <!--button  type="button" id="genHint"  value="Hint" onclick="generateHint();">Generate Hint</button -->
    <select name="hintGenerate" onchange="generateHint(this)">
-	<option value='0'>Hint Level 0</option>
-	<option value='1'>Hint Level 1</option>
-	<option value='2'>Hint Level 2</option>
-	<option value='3'>Hint Level 3</option>
-	<option value='4'>Hint Level 4</option>
+	<option value="0">Hint Level 0</option>
+	<option value="1">Hint Level 1</option>
+	<option value="2">Hint Level 2</option>
+	<option value="3">Hint Level 3</option>
+	<option value="4">Hint Level 4</option>
    </select>
-   <span name>Highest Level Hint used: <span id="highHint">0</span></span>
+   <span name="">Highest Level Hint used: <span id="highHint">0</span></span>
    
    
 </div> <!--contentRight -->
@@ -283,9 +280,10 @@ Language &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &
 			</article>
 			<div id="footer">
 			</div>
-		</div>
-	</form>		
+		
+			
 
 	
-</body>
-</html>
+
+
+</body></html>
