@@ -30,7 +30,7 @@
 	
 	EditArea.prototype.add_style= function(styles){
 		if(styles.length>0){
-			newcss = document.createElement("style");
+			var newcss = document.createElement("style");
 			newcss.type="text/css";
 			newcss.media="all";
 			if(newcss.styleSheet){ // IE

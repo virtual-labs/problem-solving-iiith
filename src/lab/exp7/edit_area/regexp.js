@@ -24,6 +24,93 @@
 		return res;		
 	};*/
 	
+function EditArea(){
+		var t=this;
+		t.error= false;	// to know if load is interrrupt
+		
+		t.inlinePopup= [{popup_id: "area_search_replace", icon_id: "search"},
+									{popup_id: "edit_area_help", icon_id: "help"}];
+		t.plugins= {};
+	
+		t.line_number=0;
+		
+		parent.editAreaLoader.set_browser_infos(t); 	// navigator identification
+		// fix IE8 detection as we run in IE7 emulate mode through X-UA <meta> tag
+		if( t.isIE >= 8 )
+			t.isIE	= 7;
+		
+		t.last_selection={};		
+		t.last_text_to_highlight="";
+		t.last_hightlighted_text= "";
+		t.syntax_list= [];
+		t.allready_used_syntax= {};
+		t.check_line_selection_timer= 50;	// the timer delay for modification and/or selection change detection
+		
+		t.textareaFocused= false;
+		t.highlight_selection_line= null;
+		t.previous= [];
+		t.next= [];
+		t.last_undo="";
+		t.files= {};
+		t.filesIdAssoc= {};
+		t.curr_file= '';
+		//t.loaded= false;
+		t.assocBracket={};
+		t.revertAssocBracket= {};		
+		// bracket selection init 
+		t.assocBracket["("]=")";
+		t.assocBracket["{"]="}";
+		t.assocBracket["["]="]";		
+		for(var index in t.assocBracket){
+			t.revertAssocBracket[t.assocBracket[index]]=index;
+		}
+		t.is_editable= true;
+		
+		
+		/*t.textarea="";	
+		
+		t.state="declare";
+		t.code = []; // store highlight syntax for languagues*/
+		// font datas
+		t.lineHeight= 16;
+		/*t.default_font_family= "monospace";
+		t.default_font_size= 10;*/
+		t.tab_nb_char= 8;	//nb of white spaces corresponding to a tabulation
+		if(t.isOpera)
+			t.tab_nb_char= 6;
+
+		t.is_tabbing= false;
+		
+		t.fullscreen= {'isFull': false};
+		
+		t.isResizing=false;	// resize var
+		
+		// init with settings and ID (area_id is a global var defined by editAreaLoader on iframe creation
+		t.id= area_id;
+		t.settings= editAreas[t.id]["settings"];
+		
+		if((""+t.settings['replace_tab_by_spaces']).match(/^[0-9]+$/))
+		{
+			t.tab_nb_char= t.settings['replace_tab_by_spaces'];
+			t.tabulation="";
+			for(var i=0; i<t.tab_nb_char; i++)
+				t.tabulation+=" ";
+		}else{
+			t.tabulation="\t";
+		}
+			
+		// retrieve the init parameter for syntax
+		if(t.settings["syntax_selection_allow"] && t.settings["syntax_selection_allow"].length>0)
+			t.syntax_list= t.settings["syntax_selection_allow"].replace(/ /g,"").split(",");
+		
+		if(t.settings['syntax'])
+			t.allready_used_syntax[t.settings['syntax']]=true;
+		
+		
+	};
+
+
+
 	// determine if the selected text if a comment or a quoted text
 	EditArea.prototype.comment_or_quote= function(){
 		var new_class="", close_tag="", sy, arg, i;

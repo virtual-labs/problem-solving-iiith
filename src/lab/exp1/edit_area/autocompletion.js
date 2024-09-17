@@ -10,7 +10,7 @@
  * - init param: autocompletion_start
  * - Button name: "autocompletion"
  */  
-
+var letter="";
 var EditArea_autocompletion= {
 	
 	/**
@@ -104,7 +104,7 @@ var EditArea_autocompletion= {
 				return false;
 			}
 			// Enter
-			else if( letter=="Entrer")
+			else if( letter=="Enterer")
 			{
 				var as	= this.container.getElementsByTagName('A');
 				// select a suggested entry
@@ -321,7 +321,7 @@ var EditArea_autocompletion= {
 								tmp["keywords"][prefix]['datas'][j]= {
 									is_typing: datas["KEYWORDS"][prefix][j][0],
 									// if replace with is empty, replace with the is_typing value
-									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ง', datas["KEYWORDS"][prefix][j][0] ) : '',
+									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ยง', datas["KEYWORDS"][prefix][j][0] ) : '',
 									comment: datas["KEYWORDS"][prefix][j][2] ? datas["KEYWORDS"][prefix][j][2] : '' 
 								};
 								

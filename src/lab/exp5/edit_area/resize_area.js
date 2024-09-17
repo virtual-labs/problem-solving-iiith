@@ -53,6 +53,15 @@
 		return false;
 	};
 	
+function getMouseX(var x)
+{
+	return x;
+}
+function getMouseY(var y)
+{
+	return y;
+}
+
 	EditAreaLoader.prototype.resize_area= function(e){		
 		var allow,newHeight,newWidth;
 		allow	= editAreas[editAreaLoader.resize["id"]]["settings"]["allow_resize"];

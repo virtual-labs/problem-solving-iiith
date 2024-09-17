@@ -52,7 +52,7 @@
 			var result=null;
 			var results= [];
 			for (var x=0;x<children.length;x++) {
-				strTagName = new String(children[x].tagName);
+				var strTagName = new String(children[x].tagName);
 				children_class="?";
 				if(strTagName!= "undefined"){
 					child_attribute= getAttribute(children[x],elem_attribute);

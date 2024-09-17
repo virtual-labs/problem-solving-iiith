@@ -1,4 +1,6 @@
-	EditArea.prototype.show_search = function(){
+function _$(x){ return document.getElementById(x); }
+
+EditArea.prototype.show_search = function(){
 		if(_$("area_search_replace").style.visibility=="visible"){
 			this.hidden_search();
 		}else{

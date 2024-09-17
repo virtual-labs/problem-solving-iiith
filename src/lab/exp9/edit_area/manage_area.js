@@ -1,4 +1,95 @@
-	EditArea.prototype.focus = function() {
+
+
+function EditArea(){
+		var t=this;
+		t.error= false;	// to know if load is interrrupt
+		
+		t.inlinePopup= [{popup_id: "area_search_replace", icon_id: "search"},
+									{popup_id: "edit_area_help", icon_id: "help"}];
+		t.plugins= {};
+	
+		t.line_number=0;
+		
+		parent.editAreaLoader.set_browser_infos(t); 	// navigator identification
+		// fix IE8 detection as we run in IE7 emulate mode through X-UA <meta> tag
+		if( t.isIE >= 8 )
+			t.isIE	= 7;
+		
+		t.last_selection={};		
+		t.last_text_to_highlight="";
+		t.last_hightlighted_text= "";
+		t.syntax_list= [];
+		t.allready_used_syntax= {};
+		t.check_line_selection_timer= 50;	// the timer delay for modification and/or selection change detection
+		
+		t.textareaFocused= false;
+		t.highlight_selection_line= null;
+		t.previous= [];
+		t.next= [];
+		t.last_undo="";
+		t.files= {};
+		t.filesIdAssoc= {};
+		t.curr_file= '';
+		//t.loaded= false;
+		t.assocBracket={};
+		t.revertAssocBracket= {};		
+		// bracket selection init 
+		t.assocBracket["("]=")";
+		t.assocBracket["{"]="}";
+		t.assocBracket["["]="]";		
+		for(var index in t.assocBracket){
+			t.revertAssocBracket[t.assocBracket[index]]=index;
+		}
+		t.is_editable= true;
+		
+		
+		/*t.textarea="";	
+		
+		t.state="declare";
+		t.code = []; // store highlight syntax for languagues*/
+		// font datas
+		t.lineHeight= 16;
+		/*t.default_font_family= "monospace";
+		t.default_font_size= 10;*/
+		t.tab_nb_char= 8;	//nb of white spaces corresponding to a tabulation
+		if(t.isOpera)
+			t.tab_nb_char= 6;
+
+		t.is_tabbing= false;
+		
+		t.fullscreen= {'isFull': false};
+		
+		t.isResizing=false;	// resize var
+		
+		// init with settings and ID (area_id is a global var defined by editAreaLoader on iframe creation
+		t.id= area_id;
+		t.settings= editAreas[t.id]["settings"];
+		
+		if((""+t.settings['replace_tab_by_spaces']).match(/^[0-9]+$/))
+		{
+			t.tab_nb_char= t.settings['replace_tab_by_spaces'];
+			t.tabulation="";
+			for(var i=0; i<t.tab_nb_char; i++)
+				t.tabulation+=" ";
+		}else{
+			t.tabulation="\t";
+		}
+			
+		// retrieve the init parameter for syntax
+		if(t.settings["syntax_selection_allow"] && t.settings["syntax_selection_allow"].length>0)
+			t.syntax_list= t.settings["syntax_selection_allow"].replace(/ /g,"").split(",");
+		
+		if(t.settings['syntax'])
+			t.allready_used_syntax[t.settings['syntax']]=true;
+		
+		
+	};
+
+
+
+
+
+EditArea.prototype.focus = function() {
 		this.textarea.focus();
 		this.textareaFocused=true;
 	};
@@ -21,7 +112,7 @@
 			infos	= this.get_selection_infos();
 			changes	= this.checkTextEvolution( typeof( this.last_selection['full_text'] ) == 'undefined' ? '' : this.last_selection['full_text'], infos['full_text'] );
 		
-			t2= new Date().getTime();
+			var t2= new Date().getTime();
 			
 			// if selection change
 			if(this.last_selection["line_start"] != infos["line_start"] || this.last_selection["line_nb"] != infos["line_nb"] || infos["full_text"] != this.last_selection["full_text"] || this.reload_highlight || this.last_selection["selectionStart"] != infos["selectionStart"] || this.last_selection["selectionEnd"] != infos["selectionEnd"] || !timer_checkup )
@@ -51,7 +142,7 @@
 					}
 					
 					// add special chars arround selected characters
-					selLength	= infos['selectionEnd'] - infos['selectionStart'];
+					var selLength	= infos['selectionEnd'] - infos['selectionStart'];
 					content		= content.substr( 0, infos["curr_pos"] - 1 ) + "\r\r" + content.substr( infos["curr_pos"] - 1, selLength ) + "\r\r" + content.substr( infos["curr_pos"] - 1 + selLength );
 					content		= '<span>'+ content.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace("\r\r", '</span><strong>').replace("\r\r", '</strong><span>') +'</span>';
 					
@@ -69,7 +160,7 @@
 					}
 				}		
 			}
-			t3= new Date().getTime();
+			var t3= new Date().getTime();
 			
 			// manage line heights
 			if( this.settings['word_wrap'] && infos["full_text"] != this.last_selection["full_text"])
@@ -85,7 +176,7 @@
 				}
 			}
 		
-			tLines= new Date().getTime();
+			var tLines= new Date().getTime();
 			// manage bracket finding
 			if( infos["line_start"] != this.last_selection["line_start"] || infos["curr_pos"] != this.last_selection["curr_pos"] || infos["full_text"].length!=this.last_selection["full_text"].length || this.reload_highlight || !timer_checkup )
 			{
@@ -117,7 +208,7 @@
 			this.last_selection=infos;
 		}
 		
-		tend= new Date().getTime();
+		var tend= new Date().getTime();
 		//if( (tend-t1) > 7 )
 		//	console.log( "tps total: "+ (tend-t1) + " tps get_infos: "+ (t2-t1)+ " tps selec: "+ (t2_1-t2)+ " tps highlight: "+ (t3-t2_1) +" tps lines: "+ (tLines-t3) +" tps cursor+lines: "+ (tend-tLines)+" \n" );
 		
