@@ -1,5 +1,5 @@
 editAreaLoader.load_syntax["pas"] = {
-	'DISPLAY_NAME' : 'Pascal'
+	"DISPLAY_NAME" : "Pascal"
 	,'COMMENT_SINGLE' : {}
 	,'COMMENT_MULTI' : {'{' : '}', '(*':'*)'}
 	,'QUOTEMARKS' : {1: '"', 2: "'"}
@@ -8,7 +8,7 @@ editAreaLoader.load_syntax["pas"] = {
 		'constants' : [
 			'Blink', 'Black', 'Blue', 'Green', 'Cyan', 'Red',
 			'Magenta', 'Brown', 'LightGray', 'DarkGray',
-			'LightBlue', 'LightGreen', 'LightCyan', 'LightRed',
+			"LightBlue", "LightGreen", "LightCyan", "LightRed",
 			'LightMagenta', 'Yellow', 'White', 'MaxSIntValue',
 			'MaxUIntValue', 'maxint', 'maxLongint', 'maxSmallint',
 			'erroraddr', 'errorcode', 'LineEnding'
@@ -33,7 +33,7 @@ editAreaLoader.load_syntax["pas"] = {
 			'Break', 'Chdir', 'Chr', 'Close', 'CompareByte',
 			'CompareChar', 'CompareDWord', 'CompareWord', 'Concat',
 			'Continue', 'Copy', 'Cos', 'CSeg', 'Dec', 'Delete',
-			'Dispose', 'DSeg', 'Eof', 'Eoln', 'Erase', 'Exclude',
+			"Dispose", "DSeg", "Eof", "Eoln", "Erase", "Exclude",
 			'Exit', 'Exp', 'Filepos', 'Filesize', 'FillByte',
 			'Fillchar', 'FillDWord', 'Fillword', 'Flush', 'Frac',
 			'Freemem', 'Getdir', 'Getmem', 'GetMemoryManager',

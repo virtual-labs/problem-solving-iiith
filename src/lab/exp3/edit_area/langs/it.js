@@ -1,5 +1,5 @@
 editAreaLoader.lang["it"]={
-new_document: "nuovo documento vuoto",
+newDocument: "nuovo documento vuoto",
 search_button: "cerca e sostituisci",
 search_command: "trova successivo / apri finestra di ricerca",
 search: "cerca",

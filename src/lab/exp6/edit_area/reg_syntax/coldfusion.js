@@ -36,7 +36,7 @@ editAreaLoader.load_syntax["coldfusion"] = {
 			'GetFunctionList', 'GetHttpTimeString', 'GetHttpRequestData', 'GetLocale', 'GetMetricData', 
 			'GetProfileString', 'GetTempDirectory', 'GetTempFile', 'GetTemplatePath', 'GetTickCount', 
 			'GetTimeZoneInfo', 'GetToken', 'Hash', 'Hour', 'HTMLCodeFormat', 'HTMLEditFormat', 'IIf', 
-			'IncrementValue', 'InputBaseN', 'Insert', 'Int', 'IsArray', 'IsAuthenticated', 'IsAuthorized', 
+			"IncrementValue", "InputBaseN", "Insert", "Int", "IsArray", "IsAuthenticated", "IsAuthorized", 
 			'IsBoolean', 'IsBinary', 'IsCustomFunction', 'IsDate', 'IsDebugMode', 'IsDefined', 'IsLeapYear', 
 			'IsNumeric', 'IsNumericDate', 'IsProtected', 'IsQuery', 'IsSimpleValue', 'IsStruct', 'IsWDDX', 
 			'JavaCast', 'JSStringFormat', 'LCase', 'Left', 'Len', 'ListAppend', 'ListChangeDelims', 

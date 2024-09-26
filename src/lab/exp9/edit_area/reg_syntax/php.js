@@ -22,12 +22,12 @@ editAreaLoader.load_syntax["php"] = {
 			'PHP_OS', 'DEFAULT_INCLUDE_PATH', 'PEAR_INSTALL_DIR', 'PEAR_EXTENSION_DIR',
 			'PHP_EXTENSION_DIR', 'PHP_BINDIR', 'PHP_LIBDIR', 'PHP_DATADIR', 'PHP_SYSCONFDIR',
 			'PHP_LOCALSTATEDIR', 'PHP_CONFIG_FILE_PATH', 'PHP_OUTPUT_HANDLER_START', 'PHP_OUTPUT_HANDLER_CONT',
-			'PHP_OUTPUT_HANDLER_END', 'E_ERROR', 'E_WARNING', 'E_PARSE', 'E_NOTICE',
+			"PHP_OUTPUT_HANDLER_END", "E_ERROR", "E_WARNING", "E_PARSE", "E_NOTICE",
 			'E_CORE_ERROR', 'E_CORE_WARNING', 'E_COMPILE_ERROR', 'E_COMPILE_WARNING', 'E_USER_ERROR',
 			'E_USER_WARNING', 'E_USER_NOTICE', 'E_ALL'
 			
 		]
-		,'functions' : [
+		,"functions" : [
 			'func_num_args', 'func_get_arg', 'func_get_args', 'strlen', 'strcmp', 'strncmp', 'strcasecmp', 'strncasecmp', 'each', 'error_reporting', 'define', 'defined',
 			'trigger_error', 'user_error', 'set_error_handler', 'restore_error_handler', 'get_declared_classes', 'get_loaded_extensions',
 			'extension_loaded', 'get_extension_funcs', 'debug_backtrace',

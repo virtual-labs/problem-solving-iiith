@@ -46,7 +46,7 @@
 		for(var index in t.assocBracket){
 			t.revertAssocBracket[t.assocBracket[index]]=index;
 		}
-		t.is_editable= true;
+		t.isEditable= true;
 		
 		
 		/*t.textarea="";	

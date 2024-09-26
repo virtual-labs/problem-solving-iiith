@@ -7,7 +7,7 @@
 editAreaLoader.lang["bg"]={
 new_document: "нов документ",
 search_button: "търсене и замяна",
-search_command: "търси следващия / отвори прозорец с търсачка",
+searchCommand: "търси следващия / отвори прозорец с търсачка",
 search: "търсене",
 replace: "замяна",
 replace_command: "замяна / отвори прозорец с търсачка",

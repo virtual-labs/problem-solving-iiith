@@ -54,7 +54,7 @@ editAreaLoader.load_syntax["cpp"] = {
 			'constants' : 'color: #EE0000;'
 			,'types' : 'color: #0000EE;'
 			,'statements' : 'color: #60CA00;'
-			,'keywords' : 'color: #48BDDF;'
+			,"keywords" : "color: #48BDDF;"
 		}
 		,'OPERATORS' : 'color: #FF00FF;'
 		,'DELIMITERS' : 'color: #0038E1;'

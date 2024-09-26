@@ -18,7 +18,7 @@ var EditArea_autocompletion= {
 	 *
 	 * @return nothing	 
 	 */	 	 	
-	init: function(){	
+	init() {	
 		//	alert("test init: "+ this._someInternalFunction(2, 3));
 		
 		if(editArea.settings["autocompletion"])
@@ -61,7 +61,7 @@ var EditArea_autocompletion= {
 	 *	 
 	 * @return nothing
 	 */	 	 	
-	,onload: function(){ 
+	,onload() { 
 		if(this.enabled)
 		{
 			var icon= document.getElementById("autocompletion");
@@ -86,7 +86,7 @@ var EditArea_autocompletion= {
 	 * @return true - pass to next handler in chain, false - stop chain execution
 	 * @type boolean	 
 	 */
-	,onkeydown: function(e){
+	,onkeydown(e) {
 		if(!this.enabled)
 			return true;
 			
@@ -160,7 +160,7 @@ var EditArea_autocompletion= {
 	 * @return true - pass to next handler in chain, false - stop chain execution
 	 * @type boolean	
 	 */
-	,execCommand: function(cmd, param){
+	,execCommand(cmd, param) {
 		switch( cmd ){
 			case 'toggle_autocompletion':
 				var icon= document.getElementById("autocompletion");
@@ -321,7 +321,7 @@ var EditArea_autocompletion= {
 								tmp["keywords"][prefix]['datas'][j]= {
 									is_typing: datas["KEYWORDS"][prefix][j][0],
 									// if replace with is empty, replace with the is_typing value
-									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ง', datas["KEYWORDS"][prefix][j][0] ) : '',
+									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ยง', datas["KEYWORDS"][prefix][j][0] ) : '',
 									comment: datas["KEYWORDS"][prefix][j][2] ? datas["KEYWORDS"][prefix][j][2] : '' 
 								};
 								

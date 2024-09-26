@@ -10,7 +10,7 @@ function EditAreaLoader(){
 	var t=this;
 	t.version= "0.8.2";
 	date= new Date();
-	t.start_time=date.getTime();
+	t.startTime=date.getTime();
 	t.win= "loading";	// window loading state
 	t.error= false;	// to know if load is interrrupt
 	t.baseURL="";

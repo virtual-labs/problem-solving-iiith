@@ -21,7 +21,7 @@ var EditArea_charmap= {
 	 *
 	 * @return nothing	 
 	 */	 	 	
-	init: function(){	
+	init() {	
 		this.default_language="Arrows";
 	}
 	

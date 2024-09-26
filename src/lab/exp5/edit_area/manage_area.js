@@ -19,7 +19,7 @@
 		else if(this.textareaFocused && editAreas[this.id]["displayed"]==true && this.isResizing==false)
 		{
 			infos	= this.get_selection_infos();
-			changes	= this.checkTextEvolution( typeof( this.last_selection['full_text'] ) == 'undefined' ? '' : this.last_selection['full_text'], infos['full_text'] );
+			changes	= this.checkTextEvolution( typeof( this.last_selection["full_text"] ) == "undefined" ? " " : this.last_selection["full_text"], infos["full_text"] );
 		
 			t2= new Date().getTime();
 			

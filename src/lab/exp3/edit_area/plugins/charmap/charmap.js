@@ -21,7 +21,7 @@ var EditArea_charmap= {
 	 *
 	 * @return nothing	 
 	 */	 	 	
-	init: function(){	
+	init() {	
 		this.default_language="Arrows";
 	}
 	
@@ -35,7 +35,7 @@ var EditArea_charmap= {
 	 * @return HTML code for a specific control or false.
 	 * @type string	or boolean
 	 */	
-	,get_control_html: function(ctrl_name){
+	,get_control_html(ctrl_name) {
 		switch(ctrl_name){
 			case "charmap":
 				// Control id, button img, command
@@ -48,7 +48,7 @@ var EditArea_charmap= {
 	 *	 
 	 * @return nothing
 	 */	 	 	
-	,onload: function(){ 
+	,onload() { 
 		if(editArea.settings["charmap_default"] && editArea.settings["charmap_default"].length>0)
 			this.default_language= editArea.settings["charmap_default"];
 	}
@@ -72,7 +72,7 @@ var EditArea_charmap= {
 	 * @return true - pass to next handler in chain, false - stop chain execution
 	 * @type boolean	
 	 */
-	,execCommand: function(cmd, param){
+	,execCommand(cmd, param) {
 		// Handle commands
 		switch(cmd){
 			case "charmap_press":

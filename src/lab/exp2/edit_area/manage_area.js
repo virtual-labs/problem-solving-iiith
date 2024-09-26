@@ -5,7 +5,7 @@
 
 
 	EditArea.prototype.check_line_selection= function(timer_checkup){
-		var changes, infos, new_top, new_width,i;
+		var changes, infos, newTop, newWidth,i;
 		
 		var t1=t2=t2_1=t3=tLines=tend= new Date().getTime();
 		// l'editeur n'existe plus => on quitte

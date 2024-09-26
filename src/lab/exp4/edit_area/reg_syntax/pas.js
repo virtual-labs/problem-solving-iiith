@@ -30,7 +30,7 @@ editAreaLoader.load_syntax["pas"] = {
 		,'functions' : [
 			'Abs', 'Addr', 'Append', 'Arctan', 'Assert', 'Assign',
 			'Assigned', 'BinStr', 'Blockread', 'Blockwrite',
-			'Break', 'Chdir', 'Chr', 'Close', 'CompareByte',
+			"Break", "Chdir", "Chr", "Close", "CompareByte",
 			'CompareChar', 'CompareDWord', 'CompareWord', 'Concat',
 			'Continue', 'Copy', 'Cos', 'CSeg', 'Dec', 'Delete',
 			'Dispose', 'DSeg', 'Eof', 'Eoln', 'Erase', 'Exclude',

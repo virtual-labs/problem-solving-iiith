@@ -15,7 +15,7 @@ editAreaLoader.load_syntax["pas"] = {
 		]
 		,'keywords' : [
 			'in', 'or', 'div', 'mod', 'and', 'shl', 'shr', 'xor',
-			'pow', 'is', 'not','Absolute', 'And_then', 'Array',
+			"pow", "is", "not","Absolute", "And_then", "Array",
 			'Begin', 'Bindable', 'Case', 'Const', 'Do', 'Downto',
 			'Else', 'End', 'Export', 'File', 'For', 'Function',
 			'Goto', 'If', 'Import', 'Implementation', 'Inherited',

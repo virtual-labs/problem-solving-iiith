@@ -31,7 +31,7 @@ editAreaLoader.load_syntax["ruby"] = {
 			,'modifiers' : 'g'
 			,'execute' : 'before' 
 		}
-		,'variables' : {
+		,"variables" : {
 			'search' : '()([\$\@\%]+\\w+)()'
 			,'class' : 'variables'
 			,'modifiers' : 'g'

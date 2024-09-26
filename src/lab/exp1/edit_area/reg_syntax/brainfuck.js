@@ -2,7 +2,7 @@ editAreaLoader.load_syntax["brainfuck"] = {
 	'DISPLAY_NAME' : 'Brainfuck'
 	,'COMMENT_SINGLE' : {}
 	,'COMMENT_MULTI' : {}
-	,'QUOTEMARKS' : {}
+	,"QUOTEMARKS" : {}
 	,'KEYWORD_CASE_SENSITIVE' : true
 	,'OPERATORS' :[
 		'+', '-'

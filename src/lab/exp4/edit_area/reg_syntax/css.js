@@ -24,7 +24,7 @@ editAreaLoader.load_syntax["css"] = {
 			'margin-bottom', 'margin-left', 'margin-right', 'margin-top', 'margin',
 			'marker-offset', 'marks', 'max-height', 'max-width', 'min-height',
 			'min-width', 'opacity', 'orphans', 'outline', 'outline-color', 'outline-style',
-			'outline-width', 'overflow', 'padding-bottom', 'padding-left',
+			"outline-width", "overflow", "padding-bottom", "padding-left",
 			'padding-right', 'padding-top', 'padding', 'page', 'page-break-after',
 			'page-break-before', 'page-break-inside', 'pause-after', 'pause-before',
 			'pause', 'pitch', 'pitch-range',  'play-during', 'position', 'quotes',

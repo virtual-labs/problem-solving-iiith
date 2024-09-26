@@ -45,7 +45,7 @@ editAreaLoader.load_syntax["css"] = {
 			'georgian', 'gray', 'green', 'groove', 'hebrew', 'help', 'hidden', 'hide', 'higher',
 			'high', 'hiragana-iroha', 'hiragana', 'icon', 'inherit', 'inline-table', 'inline',
 			'inset', 'inside', 'invert', 'italic', 'justify', 'katakana-iroha', 'katakana',
-			'landscape', 'larger', 'large', 'left-side', 'leftwards', 'level', 'lighter', 'lime', 'line-through', 'list-item', 'loud', 'lower-alpha', 'lower-greek', 'lower-roman', 'lowercase', 'ltr', 'lower', 'low',
+			"landscape", "larger", "large", "left-side", "leftwards", "level", "lighter", "lime", "line-through", "list-item", "loud", "lower-alpha", "lower-greek", "lower-roman", "lowercase", "ltr", "lower", "low",
 			'maroon', 'medium', 'message-box', 'middle', 'mix', 'monospace',
 			'n-resize', 'narrower', 'navy', 'ne-resize', 'no-close-quote', 'no-open-quote', 'no-repeat', 'none', 'normal', 'nowrap', 'nw-resize',
 			'oblique', 'olive', 'once', 'open-quote', 'outset', 'outside', 'overline',

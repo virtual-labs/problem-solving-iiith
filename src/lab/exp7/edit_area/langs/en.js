@@ -1,6 +1,6 @@
 editAreaLoader.lang["en"]={
 new_document: "new empty document",
-search_button: "search and replace",
+searchButton: "search and replace",
 search_command: "search next / open search area",
 search: "search",
 replace: "replace",

@@ -4,7 +4,7 @@ editAreaLoader.load_syntax["tsql"] = {
 	,'COMMENT_MULTI' : {'/*' : '*/'}
 	,'QUOTEMARKS' : {1: "'" }
 	,'KEYWORD_CASE_SENSITIVE' : false
-	,'KEYWORDS' : {
+	,"KEYWORDS" : {
 		'statements': [
 		    'ADD', 'EXCEPT', 'PERCENT', 'EXEC', 'PLAN', 'ALTER', 'EXECUTE', 'PRECISION',
 		    'PRIMARY', 'EXIT', 'PRINT', 'AS', 'FETCH', 'PROC', 'ASC',

@@ -17,7 +17,7 @@ editAreaLoader.load_syntax["xml"] = {
 	,'REGEXPS' : {
 		'xml' : {
 			'search' : '()(<\\?[^>]*?\\?>)()'
-			,'class' : 'xml'
+			,"class" : "xml"
 			,'modifiers' : 'g'
 			,'execute' : 'before' // before or after
 		}
@@ -33,7 +33,7 @@ editAreaLoader.load_syntax["xml"] = {
 			,'modifiers' : 'gi'
 			,'execute' : 'before' // before or after
 		}
-		,'attributes' : {
+		,"attributes" : {
 			'search' : '( |\n|\r|\t)([^ \r\n\t=]+)(=)'
 			,'class' : 'attributes'
 			,'modifiers' : 'g'
