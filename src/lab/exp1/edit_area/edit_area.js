@@ -10,43 +10,47 @@
 		var t=this;
 		t.error= false;	// to know if load is interrrupt
 		
-		t.inlinePopup= [{popup_id: "area_search_replace", icon_id: "search"},
-									{popup_id: "edit_area_help", icon_id: "help"}];
+		t.inlinePopup= [{popupId: "area_search_replace", iconId: "search"},
+									{popupId: "edit_area_help", iconId: "help"}];
 		t.plugins= {};
 	
-		t.line_number=0;
+		t.lineNumber=0;
 		
-		parent.editAreaLoader.set_browser_infos(t); 	// navigator identification
+		parent.editAreaLoader.setBrowserInfos(t); 	// navigator identification
 		// fix IE8 detection as we run in IE7 emulate mode through X-UA <meta> tag
-		if( t.isIE >= 8 )
+		if( t.isIE >= 8 ){
 			t.isIE	= 7;
+			{
 		
-		t.last_selection={};		
-		t.last_text_to_highlight="";
-		t.last_hightlighted_text= "";
-		t.syntax_list= [];
-		t.allready_used_syntax= {};
-		t.check_line_selection_timer= 50;	// the timer delay for modification and/or selection change detection
+		t.lastSelection={};		
+		t.lastTextToHighlight="";
+		t.lastHightlightedText= "";
+		t.syntaxList= [];
+		t.allreadyUsedSyntax= {};
+		t.checkLineSelectionTimer= 50;	// the timer delay for modification and/or selection change detection
 		
 		t.textareaFocused= false;
-		t.highlight_selection_line= null;
+		t.highlightSelectionLine= null;
 		t.previous= [];
 		t.next= [];
-		t.last_undo="";
+		t.lastUndo="";
 		t.files= {};
 		t.filesIdAssoc= {};
-		t.curr_file= '';
+		t.currFile= "";
 		//t.loaded= false;
 		t.assocBracket={};
 		t.revertAssocBracket= {};		
 		// bracket selection init 
 		t.assocBracket["("]=")";
 		t.assocBracket["{"]="}";
-		t.assocBracket["["]="]";		
+		t.assocBracket["["]="]";
+			
 		for(var index in t.assocBracket){
+			if(t.assocBracket["("]=")
 			t.revertAssocBracket[t.assocBracket[index]]=index;
 		}
-		t.is_editable= true;
+		t.isEditable= true;
+			
 		
 		
 		/*t.textarea="";	
@@ -57,13 +61,13 @@
 		t.lineHeight= 16;
 		/*t.default_font_family= "monospace";
 		t.default_font_size= 10;*/
-		t.tab_nb_char= 8;	//nb of white spaces corresponding to a tabulation
-		if(t.isOpera)
-			t.tab_nb_char= 6;
-
-		t.is_tabbing= false;
+		t.tabNbChar= 8;	//nb of white spaces corresponding to a tabulation
+		if(t.isOpera){
+			t.tabNbChar= 6;
+			}
+		t.isTabbing= false;
 		
-		t.fullscreen= {'isFull': false};
+		t.fullscreen= {"isFull": false};
 		
 		t.isResizing=false;	// resize var
 		
@@ -71,54 +75,56 @@
 		t.id= area_id;
 		t.settings= editAreas[t.id]["settings"];
 		
-		if((""+t.settings['replace_tab_by_spaces']).match(/^[0-9]+$/))
+		if((""+t.settings["replace_tab_by_spaces"]).match(/^[0-9]+$/))
 		{
-			t.tab_nb_char= t.settings['replace_tab_by_spaces'];
+			t.tabNbChar= t.settings["replace_tab_by_spaces"];
 			t.tabulation="";
-			for(var i=0; i<t.tab_nb_char; i++)
+			for(var i=0; i<t.tab_nb_char; i++){
 				t.tabulation+=" ";
+			}
 		}else{
 			t.tabulation="\t";
 		}
 			
 		// retrieve the init parameter for syntax
-		if(t.settings["syntax_selection_allow"] && t.settings["syntax_selection_allow"].length>0)
-			t.syntax_list= t.settings["syntax_selection_allow"].replace(/ /g,"").split(",");
+		if(t.settings["syntax_selection_allow"] && t.settings["syntax_selection_allow"].length>0){
 		
-		if(t.settings['syntax'])
-			t.allready_used_syntax[t.settings['syntax']]=true;
+			t.syntaxList= t.settings["syntax_selection_allow"].replace(/ /g,"").split(",");
+		}
+		if(t.settings["syntax"]){
+			t.allreadyUsedSyntax[t.settings["syntax"]]=true;
+		}
 		
-		
-	};
+	}
 	EditArea.prototype.init= function(){
 		var t=this, a, s=t.settings;
-		t.textarea			= _$("textarea");
-		t.container			= _$("container");
-		t.result			= _$("result");
-		t.content_highlight	= _$("content_highlight");
-		t.selection_field	= _$("selection_field");
-		t.selection_field_text= _$("selection_field_text");
-		t.processing_screen	= _$("processing");
-		t.editor_area		= _$("editor");
-		t.tab_browsing_area	= _$("tab_browsing_area");
-		t.test_font_size	= _$("test_font_size");
+		t.textarea			= ("textarea");
+		t.container			= ("container");
+		t.result			= ("result");
+		t.contentHighlight	= ("contentHighlight");
+		t.selectionField	= ("selectionField");
+		t.selectionfieldText= ("selectionFieldText");
+		t.processingScreen	= ("processing");
+		t.editorArea		= ("editor");
+		t.tabBrowsingArea	= ("tabBrowsingArea");
+		t.testFontSize	= ("testFontSize");
 		a = t.textarea;
 		
-		if(!s['is_editable'])
-			t.set_editable(false);
+		if(!s["isEditable"])
+			t.setEditable(false);
 		
-		t.set_show_line_colors( s['show_line_colors'] );
+		t.set_showLineColors( s['show_line_colors'] );
 		
-		if(syntax_selec= _$("syntax_selection"))
+		if(syntaxSelec=("syntaxSelection"))
 		{
 			// set up syntax selection lsit in the toolbar
 			for(var i=0; i<t.syntax_list.length; i++) {
-				var syntax= t.syntax_list[i];
+				var syntax= t.syntaxList[i];
 				var option= document.createElement("option");
 				option.value= syntax;
 				if(syntax==s['syntax'])
 					option.selected= "selected";
-				dispSyntax	= parent.editAreaLoader.syntax_display_name[ syntax ];
+				dispSyntax	= parent.editAreaLoader.syntaxDisplayName[ syntax ];
 				option.innerHTML= typeof( dispSyntax ) == 'undefined' ? syntax.substring( 0, 1 ).toUpperCase() + syntax.substring( 1 ) : dispSyntax;//t.get_translation("syntax_" + syntax, "word");
 				syntax_selec.appendChild(option);
 			}
