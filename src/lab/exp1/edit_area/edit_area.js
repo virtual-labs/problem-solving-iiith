@@ -18,7 +18,7 @@
 		
 		parent.editAreaLoader.set_browser_infos(t); 	// navigator identification
 		// fix IE8 detection as we run in IE7 emulate mode through X-UA <meta> tag
-		if( t.isIE >= 8 )
+		if( t.isIE >= 8 ){
 			t.isIE	= 7;
 		
 		t.last_selection={};		
@@ -42,7 +42,7 @@
 		// bracket selection init 
 		t.assocBracket["("]=")";
 		t.assocBracket["{"]="}";
-		t.assocBracket["["]="]";		
+		t.assocBracket["["]="]";
 		for(var index in t.assocBracket){
 			t.revertAssocBracket[t.assocBracket[index]]=index;
 		}
@@ -59,6 +59,7 @@
 		t.default_font_size= 10;*/
 		t.tab_nb_char= 8;	//nb of white spaces corresponding to a tabulation
 		if(t.isOpera)
+		{
 			t.tab_nb_char= 6;
 
 		t.is_tabbing= false;
@@ -70,6 +71,7 @@
 		// init with settings and ID (area_id is a global var defined by editAreaLoader on iframe creation
 		t.id= area_id;
 		t.settings= editAreas[t.id]["settings"];
+		}
 		
 		if((""+t.settings['replace_tab_by_spaces']).match(/^[0-9]+$/))
 		{
