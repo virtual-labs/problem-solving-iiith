@@ -15,15 +15,15 @@ PATH=PATH+'/'
 
 Language_select_html ={"c":"""<select name="language" id="codeId">
 
-<option value="c" selected="selected"> C (gcc 4.3.2) </option>
+<option value="c" selected="selected"> C (C 11) </option>
 
-<option value="cpp"> C++ (g++ 4.3.2) </option>
+<option value="cpp"> C++ (C++ 11) </option>
 
 </select>""", "cpp":"""<select name="language" id="codeId">
 
-<option value="c"> C (gcc 4.3.2) </option>
+<option value="c"> C (C 11) </option>
 
-<option value="cpp" selected="selected"> C++ (g++ 4.3.2) </option>
+<option value="cpp" selected="selected"> C++ (C++ 11) </option>
 
 </select>"""};
 
@@ -66,9 +66,9 @@ def getHint(codeId,HintNo):
 
 def Compile(exename,language,codeName):
 	if (language=="cpp"):
-		cmd = "g++    -s -static -o  "+exename+"  "+codeName +" -lm";
+		cmd = "g++    -s	--std=C++11 -static -o  "+exename+"  "+codeName +" -lm";
 	elif (language=="c"):
-		cmd = "gcc    -s -static -o  "+exename+"  "+codeName + " -lm";
+		cmd = "gcc    -s	--std=C11   -static -o  "+exename+"  "+codeName + " -lm";
 	p = Popen(cmd,shell=True,stdout=PIPE,stderr=STDOUT,close_fds=True);
 	p.wait();
 	status = p.stdout.read();
