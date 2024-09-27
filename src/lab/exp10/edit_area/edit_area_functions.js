@@ -47,22 +47,22 @@
 		// list all elements concerned by font changes
 		var elems= ["textarea", "content_highlight", "cursor_pos", "end_bracket", "selection_field", "selection_field_text", "line_number"];
 		
-		if(family && family!="")
-			s["font_family"]= family;
-		if(size && size>0)
-			s["font_size"]	= size;
-		if( t.isOpera && t.isOpera < 9.6 )	// opera<9.6 can't manage non monospace font
-			s['font_family']="monospace";
+		if(family && family!=""){
+			s["font_family"]= family;}
+		if(size && size>0){
+			s["font_size"]	= size;}
+		if( t.isOpera && t.isOpera < 9.6 ){	// opera<9.6 can't manage non monospace font
+			s['font_family']="monospace";}
 			
 		// update the select tag
-		if( elem_font = _$("area_font_size") )
+		if( elem_font = _$("area_font_size") ){
 		{	
 			for( i = 0; i < elem_font.length; i++ )
 			{
 				if( elem_font.options[i].value && elem_font.options[i].value == s["font_size"] )
 					elem_font.options[i].selected=true;
 			}
-		}
+		}}
 		
 		/*
 		 * somethimes firefox has rendering mistake with non-monospace font for text width in textarea vs in div for changing font size (eg: verdana change between 11pt to 12pt)

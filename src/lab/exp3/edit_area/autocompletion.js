@@ -18,7 +18,7 @@ var EditArea_autocompletion= {
 	 *
 	 * @return nothing	 
 	 */	 	 	
-	init: function(){	
+	init:(){	
 		//	alert("test init: "+ this._someInternalFunction(2, 3));
 		
 		if(editArea.settings["autocompletion"])
@@ -61,7 +61,7 @@ var EditArea_autocompletion= {
 	 *	 
 	 * @return nothing
 	 */	 	 	
-	,onload: function(){ 
+	,onload:(){ 
 		if(this.enabled)
 		{
 			var icon= document.getElementById("autocompletion");
@@ -86,7 +86,7 @@ var EditArea_autocompletion= {
 	 * @return true - pass to next handler in chain, false - stop chain execution
 	 * @type boolean	 
 	 */
-	,onkeydown: function(e){
+	,onkeydown:(e){
 		if(!this.enabled)
 			return true;
 			
@@ -160,7 +160,7 @@ var EditArea_autocompletion= {
 	 * @return true - pass to next handler in chain, false - stop chain execution
 	 * @type boolean	
 	 */
-	,execCommand: function(cmd, param){
+	,execCommand:(cmd, param){
 		switch( cmd ){
 			case 'toggle_autocompletion':
 				var icon= document.getElementById("autocompletion");
@@ -187,7 +187,7 @@ var EditArea_autocompletion= {
 		this.checkDelayTimer = setTimeout("if(editArea.textarea.selectionStart == "+ editArea.textarea.selectionStart +") EditArea_autocompletion._checkLetter();",  this.delayBeforeDisplay - editArea.check_line_selection_timer - 5 );
 	}
 	// hide the suggested box
-	,_hide: function(){
+	,_hide:(){
 		this.container.style.display="none";
 		this.selectIndex	= -1;
 		this.shown	= false;
@@ -195,7 +195,7 @@ var EditArea_autocompletion= {
 		this.autoSelectIfOneResult = false;
 	}
 	// display the suggested box
-	,_show: function(){
+	,_show:(){
 		if( !this._isShown() )
 		{
 			this.container.style.display="block";
@@ -204,7 +204,7 @@ var EditArea_autocompletion= {
 		}
 	}
 	// is the suggested box displayed?
-	,_isShown: function(){
+	,_isShown:(){
 		return this.shown;
 	}
 	// setter and getter
@@ -215,7 +215,7 @@ var EditArea_autocompletion= {
 			this.isInMiddleWord	= new_value;
 	}
 	// select the next element in the suggested box
-	,_selectNext: function()
+	,_selectNext:()
 	{
 		var as	= this.container.getElementsByTagName('A');
 		
@@ -231,7 +231,7 @@ var EditArea_autocompletion= {
 		as[ this.selectIndex ].className	+= " focus";
 	}
 	// select the previous element in the suggested box
-	,_selectBefore: function()
+	,_selectBefore:()
 	{
 		var as	= this.container.getElementsByTagName('A');
 		
@@ -247,7 +247,7 @@ var EditArea_autocompletion= {
 		this.selectIndex	= ( this.selectIndex >= as.length || this.selectIndex < 0 ) ? as.length-1 : this.selectIndex;
 		as[ this.selectIndex ].className	+= " focus";
 	}
-	,_select: function( content )
+	,_select:( content )
 	{
 		cursor_forced_position	= content.indexOf( '{@}' );
 		content	= content.replace(/{@}/g, '' );
@@ -283,7 +283,7 @@ var EditArea_autocompletion= {
 	/**
 	 * Parse the AUTO_COMPLETION part of syntax definition files
 	 */
-	,_parseSyntaxAutoCompletionDatas: function(){
+	,_parseSyntaxAutoCompletionDatas:(){
 		//foreach syntax loaded
 		for(var lang in parent.editAreaLoader.load_syntax)
 		{
@@ -321,7 +321,7 @@ var EditArea_autocompletion= {
 								tmp["keywords"][prefix]['datas'][j]= {
 									is_typing: datas["KEYWORDS"][prefix][j][0],
 									// if replace with is empty, replace with the is_typing value
-									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ง', datas["KEYWORDS"][prefix][j][0] ) : '',
+									replace_with: datas["KEYWORDS"][prefix][j][1] ? datas["KEYWORDS"][prefix][j][1].replace('ยง', datas["KEYWORDS"][prefix][j][0] ) : '',
 									comment: datas["KEYWORDS"][prefix][j][2] ? datas["KEYWORDS"][prefix][j][2] : '' 
 								};
 								
@@ -343,7 +343,7 @@ var EditArea_autocompletion= {
 		}
 	}
 	
-	,_checkLetter: function(){
+	,_checkLetter:(){
 		// check that syntax hasn't changed
 		if( this.curr_syntax_str != editArea.settings['syntax'] )
 		{
