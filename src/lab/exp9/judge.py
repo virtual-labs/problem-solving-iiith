@@ -52,7 +52,7 @@ def getHint(codeId,HintNo):
 	  	dir = PATH + "Hints1/"
 	elif(codeId=="Problem2"):
 	  	dir = PATH + "Hints2/"
-	
+
 	try:
 		F = open(dir+"Hint_"+str(HintNo)+".html","r");
 		s = F.read()
@@ -91,9 +91,9 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']
 #	HighestHint = FormData['hintGenerate']
-	#save the code in a file 
+	#save the code in a file
 	codeName = PATH + "currentCode."+langauge;
 	F = open(codeName,"w");
 	F.write(code);
@@ -109,7 +109,7 @@ def index(req):
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
@@ -147,7 +147,7 @@ def index(req):
 			O = F.read();
 			JudgeData_html+="<td>"+O+"</td>";
 			F.close();
-		
+
 			status = p.stdout.read().strip().split('\n')[0]
 			if status.split(' ')[0] == "OK":
 				if EO==O:
@@ -157,7 +157,7 @@ def index(req):
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
 					JudgeData_html+="<td> Check your algo </td>"
-					JudgeData_html+="</tr>";	
+					JudgeData_html+="</tr>";
 					break;
 			else:
 				JudgeData_html+="<td> Failed </td>"
@@ -168,9 +168,9 @@ def index(req):
 				else:
 					result = "Run Time Error";
 				JudgeData_html+="<td> "+result+" </td>"
-				JudgeData_html+="</tr>";	
+				JudgeData_html+="</tr>";
 				break;
-			JudgeData_html+="</tr>";	
+			JudgeData_html+="</tr>";
 		JudgeData_html+="</table>"
 	elif(action=="Run" and compileErrors!=""):
 		result = "Compile Error"
@@ -190,7 +190,7 @@ def index(req):
 			if(action=="Run"):
 				Results_Tests_Cases=JudgeData_html;
 				result = """<center> <p style="color:red">"""+result+""" </p> </center>"""
-			
+
 	else:
 		result = """<center> <p style="color:green">"""+result+""" </p></center>"""
 		Results_Tests_Cases=JudgeData_html;
@@ -213,7 +213,7 @@ def index(req):
 	returnValue+=F.read();
 	F.close();
 	returnValue+=code_select_html[codeId]
-	
+
 	F=open(PATH+"content2.html","r");
 	returnValue+=F.read();
 	F.close();
