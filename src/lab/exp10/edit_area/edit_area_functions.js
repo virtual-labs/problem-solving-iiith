@@ -48,9 +48,13 @@
 		var elems= ["textarea", "content_highlight", "cursor_pos", "end_bracket", "selection_field", "selection_field_text", "line_number"];
 		
 		if(family && family!="")
+		{
 			s["font_family"]= family;
+		}
 		if(size && size>0)
+		{
 			s["font_size"]	= size;
+		}
 		if( t.isOpera && t.isOpera < 9.6 )	// opera<9.6 can't manage non monospace font
 			s['font_family']="monospace";
 			
