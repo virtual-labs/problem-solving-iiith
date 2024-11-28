@@ -43,7 +43,7 @@
 	};
 	
 	EditArea.prototype.set_font= function(family, size){
-		var t=this, a=this.textarea, s=this.settings, elem_font, i, elem;
+		var t=this, a=this.textarea, s=this.settings, elem_font, i, elem;{
 		// list all elements concerned by font changes
 		var elems= ["textarea", "content_highlight", "cursor_pos", "end_bracket", "selection_field", "selection_field_text", "line_number"];
 		
@@ -83,7 +83,7 @@
 					visibility:	'hidden',
 					fontFamily:	s["font_family"],
 					fontSize:	s["font_size"]+"pt",
-					lineHeight:	t.lineHeight+"px",
+					lineHeight:	t.lineHeight+"px",{
 					padding:	'0',
 					margin:		'0',
 					border:		'none',
@@ -144,7 +144,7 @@
 			parNod.insertBefore(a, nxtSib);
 			t.area_select(start, end-start);
 		}
-		
+			{
 		// force update of selection field
 		this.focus();
 		this.update_size();
