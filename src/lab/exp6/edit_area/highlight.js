@@ -17,7 +17,7 @@
 		if(this.do_highlight===true || change_to==false)
 			this.disable_highlight();
 		else
-			this.enable_highlight();
+		{this.enable_highlight();}
 		this.textarea.focus();
 		this.textarea.selectionStart = pos_start;
 		this.textarea.selectionEnd = pos_end;
@@ -79,7 +79,7 @@
 		
 		t.smooth_selection_before_highlight=t.smooth_selection;
 		if(!t.smooth_selection)
-			t.change_smooth_selection_mode(true);
+		{t.change_smooth_selection_mode(true);}
 		t.switchClassSticky(_$("change_smooth_selection"), 'editAreaButtonDisabled', true);
 		
 		
