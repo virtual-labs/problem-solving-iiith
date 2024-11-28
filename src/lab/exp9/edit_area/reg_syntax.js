@@ -16,7 +16,7 @@
 	};
 	
 	
-	EditAreaLoader.prototype.get_escaped_regexp= function(str){
+	EditAreaLoader.prototype.getescapedregexp= function(str){
 		return str.toString().replace(/(\.|\?|\*|\+|\\|\(|\)|\[|\]|\}|\{|\$|\^|\|)/g, "\\$1");
 	};
 	
