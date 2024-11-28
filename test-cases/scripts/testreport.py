@@ -76,7 +76,7 @@ def generateLine(sno, expname, testcasename, passfail, defectlink, linklength=0)
     snolength = len(sno); sno = sno + " "*(snoColumnwidth - snolength)
     expnamelength = len(expname); expname = expname + " "*(expnameColumnwidth - expnamelength)
     if (linklength==0):
-        linklength = len(testcasename); 
+        linklength = len(testcasename);
     testcasename = testcasename + " "*(testcasenameColumnwidth - linklength)
     passfaillength = len(passfail); passfail = passfail + " "*(passfailColumnwidth - passfaillength)
     defectlinklength = len(defectlink); defectlink = defectlink + " "*(defectColumnwidth - defectlinklength)
@@ -114,7 +114,7 @@ def createTestReport(root, labName, gitLabUrl, allTestCasesLink):
         testcasename = "[[" + path + "][" + basename + "]]";
         passfail = ""; defectlink = "";
 
-        linklength = len(basename); 
+        linklength = len(basename);
 
         line = generateLine(sno, expname, testcasename, passfail, defectlink, linklength)
         filePointer.write(line)
