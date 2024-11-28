@@ -21,7 +21,7 @@ editAreaLoader.load_syntax["java"] = {
 		]
  		, 'keywords': [
            'new', 'return', 'import', 'native', 'super', 'package', 'assert', 'synchronized',
-           'instanceof', 'strictfp'
+           "instanceof", "strictfp"
 		]
 	}
 	, 'OPERATORS': [
