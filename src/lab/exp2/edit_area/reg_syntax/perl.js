@@ -17,7 +17,7 @@
 
 editAreaLoader.load_syntax["perl"] = {
 	'DISPLAY_NAME' : 'Perl',
-	'COMMENT_SINGLE' : {1 : '#'},
+	"COMMENT_SINGLE" : {1 : '#'},
 	'QUOTEMARKS' : {1: "'", 2: '"'},
 	'KEYWORD_CASE_SENSITIVE' : true,
 	'KEYWORDS' :
