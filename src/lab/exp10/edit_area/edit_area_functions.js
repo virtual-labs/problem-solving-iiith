@@ -50,9 +50,13 @@
 		if(family && family!="")
 			s["font_family"]= family;
 		if(size && size>0)
-			s["font_size"]	= size;
+		{
+		s["font_size"]	= size;
+		}
 		if( t.isOpera && t.isOpera < 9.6 )	// opera<9.6 can't manage non monospace font
+		{
 			s['font_family']="monospace";
+		}
 			
 		// update the select tag
 		if( elem_font = _$("area_font_size") )
