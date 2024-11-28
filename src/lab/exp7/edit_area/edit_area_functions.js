@@ -48,11 +48,11 @@
 		var elems= ["textarea", "content_highlight", "cursor_pos", "end_bracket", "selection_field", "selection_field_text", "line_number"];
 		
 		if(family && family!="")
-			s["font_family"]= family;
+		{	s["font_family"]= family;}
 		if(size && size>0)
-			s["font_size"]	= size;
+		{	s["font_size"]	= size;}
 		if( t.isOpera && t.isOpera < 9.6 )	// opera<9.6 can't manage non monospace font
-			s['font_family']="monospace";
+		{	s['font_family']="monospace";}
 			
 		// update the select tag
 		if( elem_font = _$("area_font_size") )
@@ -313,7 +313,7 @@
 	EditArea.prototype.scroll_to_view= function(show){
 		var zone, lineElem;
 		if(!this.smooth_selection)
-			return;
+		{	return;}
 		zone= _$("result");
 		
 		// manage height scroll
@@ -352,11 +352,11 @@
 	
 	EditArea.prototype.check_undo= function(only_once){
 		if(!editAreas[this.id])
-			return false;
+		{	return false;}
 		if(this.textareaFocused && editAreas[this.id]["displayed"]==true){
 			var text=this.textarea.value;
 			if(this.previous.length<=1)
-				this.switchClassSticky(_$("undo"), 'editAreaButtonDisabled', true);
+			{	this.switchClassSticky(_$("undo"), 'editAreaButtonDisabled', true);}
 		
 			if(!this.previous[this.previous.length-1] || this.previous[this.previous.length-1]["text"] != text){
 				this.previous.push({"text": text, "selStart": this.textarea.selectionStart, "selEnd": this.textarea.selectionEnd});
@@ -407,7 +407,7 @@
 			this.check_file_changes();
 		}
 		if(	this.next.length == 0)
-			this.switchClassSticky(_$("redo"), 'editAreaButtonDisabled', true);
+		{	this.switchClassSticky(_$("redo"), 'editAreaButtonDisabled', true);}
 	};
 	
 	EditArea.prototype.check_redo= function(){
@@ -678,7 +678,7 @@
 			
 			t.switchClassSticky(icon, 'editAreaButtonNormal', false);
 			if(t.fullscreen['allow_resize'])
-				t.allow_resize(t.fullscreen['allow_resize']);
+			{t.allow_resize(t.fullscreen['allow_resize']);}
 			if(t.isFirefox){
 				t.area_select(selStart, selEnd-selStart);
 				setTimeout("editArea.scroll_to_view();", 10);
@@ -707,7 +707,7 @@
 	//	alert("cahnge to "+new_syntax);
 		// the syntax is the same
 		if(new_syntax==this.settings['syntax'])
-			return true;
+		{return true;}
 		
 		// check that the syntax is one allowed
 		var founded= false;
@@ -906,7 +906,7 @@
 			return true;
 		}
 		else
-			return false;
+		{return false;}
 	};
 	
 	// close the given file
@@ -1056,9 +1056,9 @@
 		for( i=0; i<a_lis.length; i++)
 		{
 			if(a_lis[i].id == t.files[id]['html_id'])
-				a_lis[i].className='selected';
+			{a_lis[i].className='selected';}
 			else
-				a_lis[i].className='';
+			{a_lis[i].className='';}
 		}
 		
 		// replace next files datas
@@ -1196,7 +1196,7 @@
 		this.show_line_colors = new_value;
 		
 		if( new_value )
-			this.selection_field.className	+= ' show_colors';
+		{this.selection_field.className	+= ' show_colors';}
 		else
-			this.selection_field.className	= this.selection_field.className.replace( / show_colors/g, '' );
+		{this.selection_field.className	= this.selection_field.className.replace( / show_colors/g, '' );}
 	};
