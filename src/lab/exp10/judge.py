@@ -91,7 +91,7 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']
 #	HighestHint = FormData['hintGenerate']
 	#save the code in a file 
 	codeName = PATH + "currentCode."+langauge;
@@ -125,7 +125,7 @@ def index(req):
 
 		for i in InputTestFiles:
 			Input =  i #Input File where the final-build cases are there
-			JudgeData_html+="<tr>";	
+			JudgeData_html+="<tr>";
 			F=open(Input,"r");
 			JudgeData_html+="<td>"+F.read()+"</td>"
 			F.close();
