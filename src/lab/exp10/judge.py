@@ -106,10 +106,10 @@ def index(req):
 	if(action=="Compile" and compileErrors!=""):
 			#return compilation error
 			result = "Compile Error"
-	elif(action=="Compile" and compileErrors==""):
+	else if(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	else if(action=="Run" and compileErrors==""):	
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
@@ -172,7 +172,7 @@ def index(req):
 				break;
 			JudgeData_html+="</tr>";	
 		JudgeData_html+="</table>"
-	elif(action=="Run" and compileErrors!=""):
+	else if(action=="Run" and compileErrors!=""):
 		result = "Compile Error"
 
 	CompileError="<br><br>"

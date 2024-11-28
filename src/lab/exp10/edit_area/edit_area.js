@@ -86,7 +86,7 @@
 			t.syntax_list= t.settings["syntax_selection_allow"].replace(/ /g,"").split(",");
 		
 		if(t.settings['syntax'])
-			t.allready_used_syntax[t.settings['syntax']]=true;
+		{t.allready_used_syntax[t.settings['syntax']]=true;}
 		
 		
 	};

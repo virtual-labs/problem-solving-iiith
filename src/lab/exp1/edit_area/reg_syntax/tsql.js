@@ -7,23 +7,23 @@ editAreaLoader.load_syntax["tsql"] = {
 	,'KEYWORDS' : {
 		'statements': [
 		    'ADD', 'EXCEPT', 'PERCENT', 'EXEC', 'PLAN', 'ALTER', 'EXECUTE', 'PRECISION',
-		    'PRIMARY', 'EXIT', 'PRINT', 'AS', 'FETCH', 'PROC', 'ASC',
+		    'PRIMARY', 'EXIT', 'PRINT', 'AS', 'FETCH', 'PROC', 'ASC',                            /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 		    'FILE', 'PROCEDURE', 'AUTHORIZATION', 'FILLFACTOR', 'PUBLIC', 'BACKUP', 'FOR', 'RAISERROR',
 		    'BEGIN', 'FOREIGN', 'READ', 'FREETEXT', 'READTEXT', 'BREAK', 'FREETEXTTABLE',
 		    'RECONFIGURE', 'BROWSE', 'FROM', 'REFERENCES', 'BULK', 'FULL', 'REPLICATION', 'BY',
-		    'FUNCTION', 'RESTORE', 'CASCADE', 'GOTO', 'RESTRICT', 'CASE', 'GRANT', 'RETURN',
+		    'FUNCTION', 'RESTORE', 'CASCADE', 'GOTO', 'RESTRICT', 'CASE', 'GRANT', 'RETURN',      /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 		    'CHECK', 'GROUP', 'REVOKE', 'CHECKPOINT', 'HAVING', 'RIGHT', 'CLOSE', 'HOLDLOCK', 'ROLLBACK',
-		    'CLUSTERED', 'IDENTITY', 'ROWCOUNT', 'IDENTITY_INSERT', 'ROWGUIDCOL', 'COLLATE', 
-		    'IDENTITYCOL', 'RULE', 'COLUMN', 'IF', 'SAVE', 'COMMIT', 'SCHEMA', 'COMPUTE', 'INDEX',
+		    'CLUSTERED', 'IDENTITY', 'ROWCOUNT', 'IDENTITY_INSERT', 'ROWGUIDCOL', 'COLLATE',      /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
+		    'IDENTITYCOL', 'RULE', 'COLUMN', 'IF', 'SAVE', 'COMMIT', 'SCHEMA', 'COMPUTE', 'INDEX',/*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 		    'SELECT', 'CONSTRAINT', 'CONTAINS', 'INSERT', 'SET',
 		    'CONTAINSTABLE', 'INTERSECT', 'SETUSER', 'CONTINUE', 'INTO', 'SHUTDOWN', 'SOME',
 		    'CREATE', 'STATISTICS', 'KEY', 'CURRENT', 'KILL', 'TABLE',
-		    'CURRENT_DATE', 'TEXTSIZE', 'CURRENT_TIME', 'THEN', 'LINENO',
+		    'CURRENT_DATE', 'TEXTSIZE', 'CURRENT_TIME', 'THEN', 'LINENO',                          /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 		    'TO', 'LOAD', 'TOP', 'CURSOR', 'NATIONAL', 'TRAN', 'DATABASE', 'NOCHECK', 
 		    'TRANSACTION', 'DBCC', 'NONCLUSTERED', 'TRIGGER', 'DEALLOCATE', 'TRUNCATE',
 		    'DECLARE', 'TSEQUAL', 'DEFAULT', 'UNION', 'DELETE', 'OF', 'UNIQUE',
 		    'DENY', 'OFF', 'UPDATE', 'DESC', 'OFFSETS', 'UPDATETEXT', 'DISK', 'ON', 'USE', 'DISTINCT', 'OPEN',
-		    'DISTRIBUTED', 'OPENDATASOURCE', 'VALUES', 'DOUBLE', 'OPENQUERY', 'VARYING', 'DROP', 
+		    'DISTRIBUTED', 'OPENDATASOURCE', 'VALUES', 'DOUBLE', 'OPENQUERY', 'VARYING', 'DROP',   /*eslint no-mixed-spaces-and-tabs: ["error", "smart-tabs"]*/
 		    'OPENROWSET', 'VIEW', 'DUMMY', 'OPENXML', 'WAITFOR', 'DUMP', 'OPTION', 'WHEN', 'ELSE', 'WHERE',
 		    'END', 'ORDER', 'WHILE', 'ERRLVL', 'WITH', 'ESCAPE', 'OVER', 'WRITETEXT'
 		],

@@ -7,17 +7,22 @@
 		}
 		
 		if(this.do_highlight==change_to)
+		{	
 			return false;
-	
+		}
 			
 		this.getIESelection();
 		var pos_start= this.textarea.selectionStart;
 		var pos_end= this.textarea.selectionEnd;
 		
 		if(this.do_highlight===true || change_to==false)
+		{	
 			this.disable_highlight();
+		}	
 		else
+		{
 			this.enable_highlight();
+		}	
 		this.textarea.focus();
 		this.textarea.selectionStart = pos_start;
 		this.textarea.selectionEnd = pos_end;

@@ -114,7 +114,7 @@
 	};
 	
 	function calculeOffsetTop(r){
-		return calculeOffset(r,"offsetTop")
+		return calculeOffset(r,"offsetTop");
 	};
 	
 	function calculeOffset(element,attr){

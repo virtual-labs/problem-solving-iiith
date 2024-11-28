@@ -23,7 +23,7 @@ function keyDown(e){
 	if (EA_keys[e.keyCode])
 		letter=EA_keys[e.keyCode];
 	else
-		letter=String.fromCharCode(e.keyCode);
+	{letter=String.fromCharCode(e.keyCode);}
 	
 	var low_letter= letter.toLowerCase();
 			

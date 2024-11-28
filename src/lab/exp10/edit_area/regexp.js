@@ -54,7 +54,7 @@
 			if( arg.search(reg)!=-1 )
 				return "µ__"+ new_class +"__µ"+ arg +"µ_END_µ";
 			else
-				return "µ__"+ new_class +"__µ"+ arg;
+			{return "µ__"+ new_class +"__µ"+ arg;}
 		}
 	};
 	

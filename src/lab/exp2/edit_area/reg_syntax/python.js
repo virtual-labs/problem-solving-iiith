@@ -5,7 +5,7 @@
  *   
 **/
 editAreaLoader.load_syntax["python"] = {
-	'DISPLAY_NAME' : 'Python'
+	'DISPLAY_NAME' : "Python"
 	,'COMMENT_SINGLE' : {1 : '#'}
 	,'COMMENT_MULTI' : {}
 	,'QUOTEMARKS' : {1: "'", 2: '"'}
@@ -54,6 +54,8 @@ editAreaLoader.load_syntax["python"] = {
 			// http://python.org/doc/current/lib/string-methods.html
 			'capitalize', 'center', 'count', 'decode', 'encode', 'endswith', 'expandtabs',
 			'find', 'index', 'isalnum', 'isaplpha', 'isdigit', 'islower', 'isspace', 'istitle',
+			/*eslint quotes: ["error", "single"]*/
+			/*eslint-env es6*/
 			'isupper', 'join', 'ljust', 'lower', 'lstrip', 'replace', 'rfind', 'rindex', 'rjust',
 			'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title',
 			'translate', 'upper', 'zfill'
@@ -72,6 +74,8 @@ editAreaLoader.load_syntax["python"] = {
 			'cStringIO', 'csv', 'curses', 'datetime', 'dbhash', 'dbm', 'decimal', 'DEVICE',
 			'difflib', 'dircache', 'dis', 'distutils', 'dl', 'doctest', 'DocXMLRPCServer', 'dumbdbm',
 			'dummy_thread', 'dummy_threading', 'email', 'encodings', 'errno', 'exceptions', 'fcntl',
+			/*eslint quotes: ["error", "single"]*/
+			/*eslint-env es6*/
 			'filecmp', 'fileinput', 'FL', 'fl', 'flp', 'fm', 'fnmatch', 'formatter', 'fpectl',
 			'fpformat', 'ftplib', 'gc', 'gdbm', 'getopt', 'getpass', 'gettext', 'GL', 'gl', 'glob',
 			'gopherlib', 'grp', 'gzip', 'heapq', 'hmac', 'hotshot', 'htmlentitydefs', 'htmllib',

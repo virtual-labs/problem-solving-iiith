@@ -114,14 +114,14 @@
 	};
 	
 	function calculeOffsetTop(r){
-		return calculeOffset(r,"offsetTop")
+		return calculeOffset(r,"offsetTop");
 	};
 	
 	function calculeOffset(element,attr){
 		var offset=0;
 		while(element){
 			offset+=element[attr];
-			element=element.offsetParent
+			element=element.offsetParent;
 		}
 		return offset;
 	};
