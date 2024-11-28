@@ -44,9 +44,9 @@
 	function getChildren(elem, elem_type, elem_attribute, elem_attribute_match, option, depth)
 	{           
 		if(!option)
-			var option="single";
+		{var option="single";}
 		if(!depth)
-			var depth=-1;
+		{var depth=-1;}
 		if(elem){
 			var children= elem.childNodes;
 			var result=null;
@@ -84,7 +84,7 @@
 	function isChildOf(elem, parent){
 		if(elem){
 			if(elem==parent)
-				return true;
+			{return true;}
 			while(elem.parentNode != 'undefined'){
 				return isChildOf(elem.parentNode, parent);
 			}
@@ -144,7 +144,8 @@
 			});
 			return elem.currentStyle[prop];
 		}
-		else return null;
+		else
+		{return null;}
 	}
 	
 /****
@@ -165,11 +166,11 @@
 	function start_move_element(e, id, frame){
 		var elem_id=(e.target || e.srcElement).id;
 		if(id)
-			elem_id=id;		
+		{elem_id=id;		}
 		if(!frame)
-			frame=window;
+		{frame=window;}
 		if(frame.event)
-			e=frame.event;
+		{e=frame.event;}
 			
 		_mCE= frame.document.getElementById(elem_id);
 		_mCE.frame=frame;
@@ -198,7 +199,7 @@
 		var newTop,newLeft,maxLeft;
 
 		if( _mCE.frame && _mCE.frame.event )
-			e=_mCE.frame.event;
+		{e=_mCE.frame.event;}
 		newTop	= getMouseY(e) - _mCE.start_pos_y;
 		newLeft	= getMouseX(e) - _mCE.start_pos_x;
 		
