@@ -25,7 +25,7 @@ Language_select_html ={"c":"""<select name="language" id="codeId">
 
 <option value="cpp" selected="selected"> C++ (g++ 4.3.2) </option>
 
-</select>"""};
+</
 
 
 
@@ -91,7 +91,7 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']select>"""};
 #	HighestHint = FormData['hintGenerate']
 	#save the code in a file 
 	codeName = PATH + "currentCode."+langauge;
@@ -100,7 +100,6 @@ def index(req):
 	F.close();
 	#Compile the code now and keep the executable in a a variable exename
 	exename = PATH+"current.out";
-	
 	compileErrors = Compile(exename,langauge,codeName);
 	JudgeData_html="";
 	if(action=="Compile" and compileErrors!=""):
@@ -108,21 +107,19 @@ def index(req):
 			result = "Compile Error"
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
-
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
 		InputTestFiles 	= getInputFileNames(TEST_DIRECTORY);
 		JudgeData_html="""<table border="1" cellpadding="15" id="tableInpOut" >"""
 		JudgeData_html+="""<tr>
-		<td> Input Data </td> 
+		<td> Input Data </td>
 		<td> Expected Output </td>
 		<td> Code Output </td>
 		<td> Result </td>
 		<td> Remarks </td>
 		</tr>"""
-
 		for i in InputTestFiles:
 			Input =  i #Input File where the final-build cases are there
 			JudgeData_html+="<tr>";	
@@ -134,20 +131,17 @@ def index(req):
 			EO = F.read();
 			JudgeData_html+="<td>"+EO+"</td>";
 			F.close();
-			
 			memoryLimit = 32 * 1024;#32 MB
 			timeLimit = 1 #1sec
 			Output = TEST_DIRECTORY+"/temp.out";
 			cmd = PATH+"sandbox -a2 -f -m %d -t %d -i %s -o %s %s" % (memoryLimit,timeLimit,Input,Output,exename)
-
-
 			p = Popen(cmd,shell=True,stdout=PIPE,stderr=STDOUT,close_fds=True);
 			p.wait();
 			F = open(Output,"r");
 			O = F.read();
 			JudgeData_html+="<td>"+O+"</td>";
 			F.close();
-		
+
 			status = p.stdout.read().strip().split('\n')[0]
 			if status.split(' ')[0] == "OK":
 				if EO==O:
@@ -157,7 +151,7 @@ def index(req):
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
 					JudgeData_html+="<td> Check your algo </td>"
-					JudgeData_html+="</tr>";	
+					JudgeData_html+="</tr>";
 					break;
 			else:
 				JudgeData_html+="<td> Failed </td>"
@@ -168,13 +162,12 @@ def index(req):
 				else:
 					result = "Run Time Error";
 				JudgeData_html+="<td> "+result+" </td>"
-				JudgeData_html+="</tr>";	
+				JudgeData_html+="</tr>";
 				break;
-			JudgeData_html+="</tr>";	
+			JudgeData_html+="</tr>";
 		JudgeData_html+="</table>"
 	elif(action=="Run" and compileErrors!=""):
 		result = "Compile Error"
-
 	CompileError="<br><br>"
 	Results_Tests_Cases=""
 	if(result!="Accepted!!"):
@@ -190,7 +183,7 @@ def index(req):
 			if(action=="Run"):
 				Results_Tests_Cases=JudgeData_html;
 				result = """<center> <p style="color:red">"""+result+""" </p> </center>"""
-			
+
 	else:
 		result = """<center> <p style="color:green">"""+result+""" </p></center>"""
 		Results_Tests_Cases=JudgeData_html;
