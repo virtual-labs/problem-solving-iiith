@@ -7,7 +7,7 @@
 		}
 		
 		if(this.do_highlight==change_to)
-			return false;
+		{	return false;}
 	
 			
 		this.getIESelection();
@@ -15,9 +15,9 @@
 		var pos_end= this.textarea.selectionEnd;
 		
 		if(this.do_highlight===true || change_to==false)
-			this.disable_highlight();
+		{	this.disable_highlight();}
 		else
-			this.enable_highlight();
+		{	this.enable_highlight();}
 		this.textarea.focus();
 		this.textarea.selectionStart = pos_start;
 		this.textarea.selectionEnd = pos_end;
@@ -72,14 +72,14 @@
 		
 		// IE can't manage mouse click outside text range without this
 		if( t.isIE )
-			a.style.backgroundColor="#FFFFFF";	
+		{	a.style.backgroundColor="#FFFFFF";	}
 
 		t.switchClassSticky(_$("highlight"), 'editAreaButtonSelected', false);
 		t.switchClassSticky(_$("reset_highlight"), 'editAreaButtonNormal', false);
 		
 		t.smooth_selection_before_highlight=t.smooth_selection;
 		if(!t.smooth_selection)
-			t.change_smooth_selection_mode(true);
+		{	t.change_smooth_selection_mode(true);}
 		t.switchClassSticky(_$("change_smooth_selection"), 'editAreaButtonDisabled', true);
 		
 		
@@ -100,7 +100,7 @@
 		var textToHighlight=infos["full_text"], doSyntaxOpti = false, doHtmlOpti = false, stay_begin="", stay_end="", trace_new , trace_last;
 		
 		if(t.last_text_to_highlight==infos["full_text"] && t.resync_highlight!==true)
-			return;
+		{	return;}
 					
 		//  OPTIMISATION: will search to update only changed lines
 		if(t.reload_highlight===true){
