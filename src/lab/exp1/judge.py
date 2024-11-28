@@ -81,7 +81,7 @@ def getInputFileNames(directory):
 	Files = Files.strip();
 	Files = Files.split('\n');
 	return Files;
-def index(req):	
+def index(req):
 	FormData = util.FieldStorage(req);
 	langauge= FormData['language'];
 	try:
@@ -109,7 +109,7 @@ def index(req):
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
@@ -147,7 +147,7 @@ def index(req):
 			O = F.read();
 			JudgeData_html+="<td>"+O+"</td>";
 			F.close();
-		
+
 			status = p.stdout.read().strip().split('\n')[0]
 			if status.split(' ')[0] == "OK":
 				if EO==O:
@@ -168,9 +168,9 @@ def index(req):
 				else:
 					result = "Run Time Error";
 				JudgeData_html+="<td> "+result+" </td>"
-				JudgeData_html+="</tr>";	
+				JudgeData_html+="</tr>";
 				break;
-			JudgeData_html+="</tr>";	
+			JudgeData_html+="</tr>";
 		JudgeData_html+="</table>"
 	elif(action=="Run" and compileErrors!=""):
 		result = "Compile Error"
@@ -190,7 +190,7 @@ def index(req):
 			if(action=="Run"):
 				Results_Tests_Cases=JudgeData_html;
 				result = """<center> <p style="color:red">"""+result+""" </p> </center>"""
-			
+
 	else:
 		result = """<center> <p style="color:green">"""+result+""" </p></center>"""
 		Results_Tests_Cases=JudgeData_html;
