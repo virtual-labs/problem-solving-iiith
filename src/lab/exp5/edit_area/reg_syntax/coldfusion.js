@@ -7,7 +7,7 @@ editAreaLoader.load_syntax["coldfusion"] = {
 	,'KEYWORD_CASE_SENSITIVE' : false
 		,'KEYWORDS' : {
 		'statements' : [
-			'include', 'require', 'include_once', 'require_once',
+			"include", "require", "include_once", "require_once",
 			'for', 'foreach', 'as', 'if', 'elseif', 'else', 'while', 'do', 'endwhile',
             'endif', 'switch', 'case', 'endswitch',
 			'return', 'break', 'continue'
@@ -16,11 +16,11 @@ editAreaLoader.load_syntax["coldfusion"] = {
 			'AND', 'break', 'case', 'CONTAIN', 'CONTAINS', 'continue', 'default', 'do', 
 			'DOES', 'else', 'EQ', 'EQUAL', 'EQUALTO', 'EQV', 'FALSE', 'for', 'GE', 
 			'GREATER', 'GT', 'GTE', 'if', 'IMP', 'in', 'IS', 'LE', 'LESS', 'LT', 'LTE', 
-			'MOD', 'NEQ', 'NOT', 'OR', 'return', 'switch', 'THAN', 'TO', 'TRUE', 'var', 
-			'while', 'XOR'
+			"MOD", "NEQ", "NOT", "OR", "return", "switch", "THAN", "TO", "TRUE", "var", 
+			"while", "XOR"
 		]
 		,'functions' : [
-			'Abs', 'ACos', 'ArrayAppend', 'ArrayAvg', 'ArrayClear', 'ArrayDeleteAt', 'ArrayInsertAt', 
+			"Abs", "ACos", "ArrayAppend", "ArrayAvg", "ArrayClear", "ArrayDeleteAt", "ArrayInsertAt", 
 			'ArrayIsEmpty', 'ArrayLen', 'ArrayMax', 'ArrayMin', 'ArrayNew', 'ArrayPrepend', 'ArrayResize', 
 			'ArraySet', 'ArraySort', 'ArraySum', 'ArraySwap', 'ArrayToList', 'Asc', 'ASin', 'Atn', 'AuthenticatedContext', 
 			'AuthenticatedUser', 'BitAnd', 'BitMaskClear', 'BitMaskRead', 'BitMaskSet', 'BitNot', 'BitOr', 
