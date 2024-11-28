@@ -6,7 +6,7 @@ editAreaLoader.load_syntax["vb"] = {
 	,'KEYWORD_CASE_SENSITIVE' : false
 	,'KEYWORDS' : {
 		'statements' : [
-	        'if','then','for','each','while','do','loop',
+		'if','then','for','each','while','do','loop',
             'else','elseif','select','case','end select',
             'until','next','step','to','in','end if'
 		]
