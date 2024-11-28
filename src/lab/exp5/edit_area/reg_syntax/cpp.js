@@ -3,7 +3,7 @@ editAreaLoader.load_syntax["cpp"] = {
 	,'COMMENT_SINGLE' : {1 : '//'}
 	,'COMMENT_MULTI' : {'/*' : '*/'}
 	,'QUOTEMARKS' : {1: "'", 2: '"'}
-	,'KEYWORD_CASE_SENSITIVE' : true
+	,"KEYWORD_CASE_SENSITIVE" : true
 	,'KEYWORDS' : {
 		'constants' : [
 			'NULL', 'false', 'std', 'stdin', 'stdout', 'stderr',
