@@ -43,9 +43,9 @@
 	*/
 	function getChildren(elem, elem_type, elem_attribute, elem_attribute_match, option, depth)
 	{           
-		if(!option)
+		if(!option){
 			var option="single";
-		if(!depth)
+		if(!depth){
 			var depth=-1;
 		if(elem){
 			var children= elem.childNodes;
@@ -75,7 +75,7 @@
 					}
 				}
 			}
-			if(option=="all")
+			if(option=="all"){
 			   return results;
 		}
 		return null;
