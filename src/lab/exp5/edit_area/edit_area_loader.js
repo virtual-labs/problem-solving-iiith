@@ -9,8 +9,8 @@
 function EditAreaLoader(){
 	var t=this;
 	t.version= "0.8.2";
-	date= new Date();
-	t.start_time=date.getTime();
+	var date= new Date();
+	t.startTime=date.getTime();
 	t.win= "loading";	// window loading state
 	t.error= false;	// to know if load is interrrupt
 	t.baseURL="";
@@ -120,7 +120,7 @@ EditAreaLoader.prototype ={
 	
 	// add browser informations to the object passed in parameter
 	set_browser_infos : function(o){
-		ua= navigator.userAgent;
+		var ua= navigator.userAgent;
 		
 		// general detection
 		o.isWebKit	= /WebKit/.test(ua);
@@ -205,7 +205,7 @@ EditAreaLoader.prototype ={
 		
 	init : function(settings){
 		var t=this,s=settings,i;
-		
+		var editArea={};		
 		if(!s["id"])
 			t.has_error();
 		if(t.error)
@@ -860,7 +860,7 @@ EditAreaLoader.prototype ={
     // allow to set the selection with the given start and end positions
     setSelectionRange : function(id, new_start, new_end){
     	var fs=window.frames;
-    	
+    	var elem;
         if(fs["frame_"+id] && editAreas[id]["displayed"]==true){
             fs["frame_"+ id].editArea.area_select(new_start, new_end-new_start);  
 			// make an auto-scroll to the selection
@@ -918,7 +918,7 @@ EditAreaLoader.prototype ={
     	var old_sel,new_sel;
     	
     	old_sel	= this.getSelectionRange(id);
-    	text	= open_tag + this.getSelectedText(id) + close_tag;
+    	var text	= open_tag + this.getSelectedText(id) + close_tag;
     	 
 		editAreaLoader.setSelectedText(id, text);
 		
@@ -973,7 +973,7 @@ EditAreaLoader.prototype ={
 	
 	// restore hidden EditArea and normal textarea
 	show : function(id){
-		var fs= window.frames,d=document,t=this,span;
+		var fs= window.frames,d=document,t=this,span,elem,sel,scrollTop,scrollLeft;
 		if((elem=d.getElementById(id)) && t.hidden[id])
 		{
 			elem.style.display= "inline";
