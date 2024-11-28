@@ -10,7 +10,7 @@ main(){
 		scanf(" %c",&input_chars[i]);
 	}
 	char input[100];
-	scanf("%s",input);
+	scanf("%s",&input);
 	int position=0,j=0; 
 	// position store the rank of the word.
 	// j stores index of the input charecter set

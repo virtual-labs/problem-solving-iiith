@@ -3,7 +3,7 @@ main(){
 
 	int N;
 	scanf("%d",&N);
-	int ct=1;
+	int ct=1;//
 	char input_chars[N];
 	int i;
 	for(i=0;i<N;i++)
@@ -11,7 +11,7 @@ main(){
 		scanf(" %c",&input_chars[i]);
 	}
 	char input[100];
-	scanf("%s",input);
+	scanf("%s",&input);
 	int position=0,j=0; 
 	// position store the rank of the word.
 	// j stores index of the input charecter set

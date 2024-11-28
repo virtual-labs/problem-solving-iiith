@@ -1,7 +1,7 @@
 	
 		#include<stdio.h>
 #include<stdlib.h>
-main(){
+void main(){
 int N;
 scanf("%d",&N);
 int *arr=0,*best=0;
@@ -25,6 +25,6 @@ for(i=0;i< N;i++){
 	
 }
 printf("%d\n",longest_length);
-return 0;	
+	
 }
 	

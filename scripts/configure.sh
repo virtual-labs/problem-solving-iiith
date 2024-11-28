@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sed -i '/<\/VirtualHost>/i \
   <Directory /var/www/> \
     AddHandler mod_python .py \

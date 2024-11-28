@@ -59,7 +59,7 @@ def createMetaFile(root, testCases, gitLabUrl):
     filePointer = open(metaFilePath, 'w')
     filePointer.write("S.no\t\tTest case link\n")
     count = 1
-    labName = root.split("/")[-2]
+   
     expname = root.split("/")[-1]
     gitExpUrlPartial = gitLabUrl +  "/blob/master/test-cases/integration_test-cases/" + expname
     testCasesLink = []

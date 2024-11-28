@@ -31,7 +31,7 @@ editAreaLoader.load_syntax["c"] = {
 		'(', ')', '[', ']', '{', '}'
 	]
 	,'REGEXPS' : {
-		'precompiler' : {
+		"precompiler" : {
 			'search' : '()(#[^\r\n]*)()'
 			,'class' : 'precompiler'
 			,'modifiers' : 'g'

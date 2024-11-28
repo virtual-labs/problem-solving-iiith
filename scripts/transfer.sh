@@ -7,7 +7,8 @@
 # The -F is meant to do the finalbuild for the deployment server
 
 SRC_DIR=./src
-BUILD_DIR=./build
+# Commented the variable as its not being used
+# BUILD_DIR=./build
 FINAL_DIR=final-build
 FINAL_FLAG=false
 

@@ -2,7 +2,7 @@
 main(){
 	int N;
 	char file_name[100];
-	scanf("%s",file_name);
+	scanf("%s",&file_name);
 	FILE *f = fopen(file_name,"r");
 	int num;
 	int length=1;

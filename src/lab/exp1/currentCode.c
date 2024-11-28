@@ -10,7 +10,7 @@ int N;
 		scanf(" %c",&input_chars[i]);
 	}
 	char input[100];
-	scanf("%s",input);
+	scanf("%s",&input);
 	int position=0,j=0; 
 	int addValue[N];
 	for(i=0,j=N-1;i<N ;i++,j--)

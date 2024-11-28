@@ -5,7 +5,7 @@
 main(){
 	int N;
 	char str[1000001];
-	scanf("%s",str);
+	scanf("%s",&str);
 	scanf("%d",&N);
 	if(!N)
 	{

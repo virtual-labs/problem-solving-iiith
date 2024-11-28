@@ -3,7 +3,7 @@
 main(){
     // storing the two integers in strings s1, s2
 	char s1[51],s2[51];
-	scanf("%s %s",s1,s2);
+	scanf("%s %s",&s1,&s2);
      //sum array to store the result but the program stores the result in reverse order
 	char sum[52];
 	
