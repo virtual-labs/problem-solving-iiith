@@ -44,9 +44,9 @@
 	function getChildren(elem, elem_type, elem_attribute, elem_attribute_match, option, depth)
 	{           
 		if(!option)
-			var option="single";
+		{var option="single";}
 		if(!depth)
-			var depth=-1;
+		{var depth=-1;}
 		if(elem){
 			var children= elem.childNodes;
 			var result=null;
@@ -84,7 +84,7 @@
 	function isChildOf(elem, parent){
 		if(elem){
 			if(elem==parent)
-				return true;
+			{return true;}
 			while(elem.parentNode != 'undefined'){
 				return isChildOf(elem.parentNode, parent);
 			}
@@ -198,7 +198,7 @@
 		var newTop,newLeft,maxLeft;
 
 		if( _mCE.frame && _mCE.frame.event )
-			e=_mCE.frame.event;
+		{e=_mCE.frame.event;}
 		newTop	= getMouseY(e) - _mCE.start_pos_y;
 		newLeft	= getMouseX(e) - _mCE.start_pos_x;
 		
@@ -241,7 +241,7 @@
 		//textarea.setSelectionRange(start, end);
 		
 		if(nav.isIE)
-			set_IE_selection(t);
+		{	set_IE_selection(t);}
 	};
 
 	
