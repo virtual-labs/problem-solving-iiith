@@ -14,7 +14,8 @@
  * but little others. See http://perldoc.perl.org/Opcode.html to learn
  * more.
  ***************************************************************************/
-
+/*gloal editAreaLoader*/
+/*eslint no-undef: "error"*/
 editAreaLoader.load_syntax["perl"] = {
 	'DISPLAY_NAME' : 'Perl',
 	'COMMENT_SINGLE' : {1 : '#'},
