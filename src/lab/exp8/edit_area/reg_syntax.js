@@ -3,7 +3,7 @@
 		res="(\\b)(";
 		for(i=0; i<text_array.length; i++){
 			if(i>0)
-				res+="|";
+			{res+="|";}
 			//res+="("+ tab_text[i] +")";
 			//res+=tab_text[i].replace(/(\.|\?|\*|\+|\\|\(|\)|\[|\]|\{|\})/g, "\\$1");
 			res+=this.get_escaped_regexp(text_array[i]);
@@ -32,9 +32,10 @@
 				if(this.load_syntax[lang]['KEYWORDS']){
 					param="g";
 					if(this.load_syntax[lang]['KEYWORD_CASE_SENSITIVE']===false)
-						param+="i";
+					{param+="i";}
 					for(var i in this.load_syntax[lang]['KEYWORDS']){
-						if(typeof(this.load_syntax[lang]['KEYWORDS'][i])=="function") continue;
+						if(typeof(this.load_syntax[lang]['KEYWORDS'][i])=="function")
+						{continue;}
 						this.syntax[lang]["keywords_reg_exp"][i]= new RegExp(this.get_regexp( this.load_syntax[lang]['KEYWORDS'][i] ), param);
 						this.keywords_reg_exp_nb++;
 					}
@@ -65,7 +66,7 @@
 						nb++;
 					}
 					if(str.length>0)
-						this.syntax[lang]["delimiters_reg_exp"]= new RegExp("("+str+")","g");
+					{this.syntax[lang]["delimiters_reg_exp"]= new RegExp("("+str+")","g");}
 				}
 				
 				
@@ -102,7 +103,8 @@
 				// (/\*(.|[\r\n])*?\*/)
 				if(this.load_syntax[lang]['COMMENT_MULTI']){
 					for(var i in this.load_syntax[lang]['COMMENT_MULTI']){
-						if(typeof(this.load_syntax[lang]['COMMENT_MULTI'][i])=="function") continue;							
+						if(typeof(this.load_syntax[lang]['COMMENT_MULTI'][i])=="function")
+						{continue;							}
 						var start=this.get_escaped_regexp(i);
 						var end=this.get_escaped_regexp(this.load_syntax[lang]['COMMENT_MULTI'][i]);
 						quote_tab[quote_tab.length]="("+start+"(.|\\n|\\r)*?("+end+"|$))";
@@ -112,10 +114,10 @@
 					}			
 				}		
 				if(quote_tab.length>0)
-					this.syntax[lang]["comment_or_quote_reg_exp"]= new RegExp("("+quote_tab.join("|")+")","gi");
+				{this.syntax[lang]["comment_or_quote_reg_exp"]= new RegExp("("+quote_tab.join("|")+")","gi");}
 				
 				if(syntax_trace.length>0) //   /((.|\n)*?)(\\*("|'|\/\*|\*\/|\/\/|$))/g
-					this.syntax[lang]["syntax_trace_regexp"]= new RegExp("((.|\n)*?)(\\\\*("+ syntax_trace.join("|") +"|$))", "gmi");
+				{this.syntax[lang]["syntax_trace_regexp"]= new RegExp("((.|\n)*?)(\\\\*("+ syntax_trace.join("|") +"|$))", "gmi");}
 				
 				if(this.load_syntax[lang]['SCRIPT_DELIMITERS']){
 					this.syntax[lang]["script_delimiters"]= {};
