@@ -25,7 +25,7 @@
 		t.last_text_to_highlight="";
 		t.last_hightlighted_text= "";
 		t.syntax_list= [];
-		t.allready_used_syntax= {};
+		t.allreadyusedsyntax= {};
 		t.check_line_selection_timer= 50;	// the timer delay for modification and/or selection change detection
 		
 		t.textareaFocused= false;
