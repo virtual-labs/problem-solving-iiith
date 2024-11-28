@@ -81,7 +81,9 @@ var EditArea_test= {
 			case "test_select_change":
 				var val= document.getElementById("test_select").value;
 				if(val!=-1)
+				{
 					parent.editAreaLoader.insertTags(editArea.id, "<"+val+">", "</"+val+">");
+				}	
 				document.getElementById("test_select").options[0].selected=true; 
 				return false;
 			case "test_cmd":
