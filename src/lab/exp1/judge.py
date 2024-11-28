@@ -81,7 +81,7 @@ def getInputFileNames(directory):
 	Files = Files.strip();
 	Files = Files.split('\n');
 	return Files;
-def index(req):	
+def index(req):
 	FormData = util.FieldStorage(req);
 	langauge= FormData['language'];
 	try:
@@ -93,7 +93,7 @@ def index(req):
 	Hints = FormData['hintC']
 	highHint = FormData['highHint']    
 #	HighestHint = FormData['hintGenerate']
-	#save the code in a file 
+	#save the code in a file
 	codeName = PATH + "currentCode."+langauge;
 	F = open(codeName,"w");
 	F.write(code);
@@ -109,7 +109,7 @@ def index(req):
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
