@@ -19,7 +19,7 @@ editAreaLoader.load_syntax["vb"] = {
 
 		,'functions' : [
 			'CDate','Date','DateAdd','DateDiff','DatePart','DateSerial','DateValue','Day','FormatDateTime',
-            'Hour','IsDate','Minute','Month',
+            "Hour","IsDate","Minute","Month",
             'MonthName','Now','Second','Time','Timer','TimeSerial','TimeValue','Weekday','WeekdayName ','Year',
             'Asc','CBool','CByte','CCur','CDate','CDbl','Chr','CInt','CLng','CSng','CStr','Hex','Oct','FormatCurrency',
             'FormatDateTime','FormatNumber','FormatPercent','Abs','Atn','Cos','Exp','Hex','Int','Fix','Log','Oct',
