@@ -12,7 +12,7 @@ editAreaLoader.load_syntax["c"] = {
 			'FILE', 'auto', 'char', 'const', 'double',
 			'extern', 'float', 'inline', 'int', 'long', 'register',
 			'short', 'signed', 'size_t', 'static', 'struct',
-			'time_t', 'typedef', 'union', 'unsigned', 'void',
+			"time_t", "typedef", "union", "unsigned", "void",
 			'volatile'
 		]
 		,'statements' : [
