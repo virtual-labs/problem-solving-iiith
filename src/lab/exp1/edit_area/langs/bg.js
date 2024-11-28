@@ -4,7 +4,7 @@
  *	Company:	SOFTKIT Bulgarian
  *	Site:		http://www.softkit-bg.com
  */
-editAreaLoader.lang["bg"]={
+editAreaLoader.prototype.lang["bg"]={
 new_document: "нов документ",
 search_button: "търсене и замяна",
 search_command: "търси следващия / отвори прозорец с търсачка",
