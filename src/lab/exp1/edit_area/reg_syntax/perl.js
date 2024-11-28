@@ -45,7 +45,7 @@ editAreaLoader.load_syntax["perl"] = {
 			]
 	},
 	'OPERATORS' :
-		[ '+', '-', '/', '*', '=', '<', '>', '!', '||', '.', '&&',
+		[ "+", "-", "/", "*", "=", "<", ">", "!", "||", ".", "&&",
 			' eq ', ' ne ', '=~' ],
 	'DELIMITERS' :
 		[ '(', ')', '[', ']', '{', '}' ],
@@ -58,7 +58,7 @@ editAreaLoader.load_syntax["perl"] = {
 			'class' : 'scopingnames',
 			'modifiers' : 'g', 'execute' : 'before' },
 		'scalars' : { 'search': '()(\\\$[a-zA-Z0-9_:]*)()',
-			'class' : 'vars',
+			"class" : "vars",
 			'modifiers' : 'g', 'execute' : 'after' },
 		'arrays' : { 'search': '()(@[a-zA-Z0-9_:]*)()',
 			'class' : 'vars',
