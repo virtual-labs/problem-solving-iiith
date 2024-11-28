@@ -5,6 +5,6 @@
  *	Site:		http://www.softkit-bg.com
  */
 editArea.add_lang("bg",{
-test_select: "избери таг",
+testselect: "избери таг",
 test_but: "тествай копието"
 });
