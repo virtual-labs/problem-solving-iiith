@@ -60,7 +60,9 @@
 			for( i = 0; i < elem_font.length; i++ )
 			{
 				if( elem_font.options[i].value && elem_font.options[i].value == s["font_size"] )
+				{	
 					elem_font.options[i].selected=true;
+				}	
 			}
 		}
 		
