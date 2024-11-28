@@ -10,32 +10,31 @@
 		var t=this;
 		t.error= false;	// to know if load is interrrupt
 		
-		t.inlinePopup= [{popup_id: "area_search_replace", icon_id: "search"},
-									{popup_id: "edit_area_help", icon_id: "help"}];
+		t.inlinePopup= [{popupId: "area_search_replace", iconId: "search"},{popupId: "edit_area_help", iconId: "help"}];				
 		t.plugins= {};
 	
-		t.line_number=0;
+		t.lineNumber=0;
 		
-		parent.editAreaLoader.set_browser_infos(t); 	// navigator identification
+		parent.editAreaLoader.setBrowserInfos(t); 	// navigator identification
 		// fix IE8 detection as we run in IE7 emulate mode through X-UA <meta> tag
 		if( t.isIE >= 8 )
 			t.isIE	= 7;
 		
-		t.last_selection={};		
-		t.last_text_to_highlight="";
-		t.last_hightlighted_text= "";
-		t.syntax_list= [];
-		t.allready_used_syntax= {};
-		t.check_line_selection_timer= 50;	// the timer delay for modification and/or selection change detection
+		t.lastSelection={};		
+		t.lastTextToHighlight="";
+		t.lastHightlightedText= "";
+		t.syntaxList= [];
+		t.allreadyUsedSyntax= {};
+		t.checkLineSelectionTimer= 50;	// the timer delay for modification and/or selection change detection
 		
 		t.textareaFocused= false;
-		t.highlight_selection_line= null;
+		t.highlightSelectionLine= null;
 		t.previous= [];
 		t.next= [];
-		t.last_undo="";
+		t.lastUndo="";
 		t.files= {};
 		t.filesIdAssoc= {};
-		t.curr_file= '';
+		t.currFile= '';
 		//t.loaded= false;
 		t.assocBracket={};
 		t.revertAssocBracket= {};		
@@ -46,7 +45,7 @@
 		for(var index in t.assocBracket){
 			t.revertAssocBracket[t.assocBracket[index]]=index;
 		}
-		t.is_editable= true;
+		t.isEditable= true;
 		
 		
 		/*t.textarea="";	
@@ -57,9 +56,9 @@
 		t.lineHeight= 16;
 		/*t.default_font_family= "monospace";
 		t.default_font_size= 10;*/
-		t.tab_nb_char= 8;	//nb of white spaces corresponding to a tabulation
+		t.tabNbChar= 8;	//nb of white spaces corresponding to a tabulation
 		if(t.isOpera)
-			t.tab_nb_char= 6;
+			t.tabNbChar= 6;
 
 		t.is_tabbing= false;
 		
@@ -68,7 +67,7 @@
 		t.isResizing=false;	// resize var
 		
 		// init with settings and ID (area_id is a global var defined by editAreaLoader on iframe creation
-		t.id= area_id;
+		t.id= areaId;
 		t.settings= editAreas[t.id]["settings"];
 		
 		if((""+t.settings['replace_tab_by_spaces']).match(/^[0-9]+$/))
@@ -95,21 +94,21 @@
 		t.textarea			= _$("textarea");
 		t.container			= _$("container");
 		t.result			= _$("result");
-		t.content_highlight	= _$("content_highlight");
-		t.selection_field	= _$("selection_field");
-		t.selection_field_text= _$("selection_field_text");
-		t.processing_screen	= _$("processing");
-		t.editor_area		= _$("editor");
-		t.tab_browsing_area	= _$("tab_browsing_area");
-		t.test_font_size	= _$("test_font_size");
+		t.contentHighlight	= _$("content_highlight");
+		t.selectionField	= _$("selection_field");
+		t.selectionFieldText= _$("selection_field_text");
+		t.processingScreen	= _$("processing");
+		t.editorArea		= _$("editor");
+		t.tabBrowsingArea	= _$("tab_browsing_area");
+		t.testFontSize	= _$("test_font_size");
 		a = t.textarea;
 		
-		if(!s['is_editable'])
-			t.set_editable(false);
+		if(!s['isEditable'])
+			t.setEditable(false);
 		
-		t.set_show_line_colors( s['show_line_colors'] );
+		t.setShowLineColors( s['showLineColors'] );
 		
-		if(syntax_selec= _$("syntax_selection"))
+		if(syntaxSelec= _$("syntaxSelection"))
 		{
 			// set up syntax selection lsit in the toolbar
 			for(var i=0; i<t.syntax_list.length; i++) {
