@@ -10,7 +10,7 @@
 	};
 	
 	EditArea.prototype.show_waiting_screen= function(){
-		width	= this.editor_area.offsetWidth;
+		var width	= this.editor_area.offsetWidth;
 		height	= this.editor_area.offsetHeight;
 		if( !(this.isIE && this.isIE<6) )
 		{
