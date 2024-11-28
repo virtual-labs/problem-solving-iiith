@@ -35,7 +35,7 @@ editAreaLoader.load_syntax["css"] = {
 			'width', 'word-spacing', 'z-index', 'bottom', 'left'
 		]
 		,'values' : [
-			'above', 'absolute', 'always', 'armenian', 'aural', 'auto', 'avoid',
+			"above", "absolute", "always", "armenian", "aural", "auto", "avoid",
 			'baseline', 'behind', 'below', 'bidi-override', 'black', 'blue', 'blink', 'block', 'bold', 'bolder', 'both',
 			'capitalize', 'center-left', 'center-right', 'center', 'circle', 'cjk-ideographic', 
             'close-quote', 'collapse', 'condensed', 'continuous', 'crop', 'crosshair', 'cross', 'cursive',
