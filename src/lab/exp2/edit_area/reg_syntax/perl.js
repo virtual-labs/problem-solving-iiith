@@ -53,7 +53,7 @@ editAreaLoader.load_syntax["perl"] = {
 	{
 		'packagedecl' : { 'search': '(package )([^ \r\n\t#;]*)()',
 			'class' : 'scopingnames',
-			'modifiers' : 'g', 'execute' : 'before' },
+			"modifiers" : "g", "execute" : "before" },
 		'subdecl' : { 'search': '(sub )([^ \r\n\t#]*)()',
 			'class' : 'scopingnames',
 			'modifiers' : 'g', 'execute' : 'before' },
