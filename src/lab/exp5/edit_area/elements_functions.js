@@ -110,7 +110,7 @@
 	};
 	
 	function calculeOffsetLeft(r){
-		return calculeOffset(r,"offsetLeft")
+		return calculeOffset(r,"offsetLeft");
 	};
 	
 	function calculeOffsetTop(r){
