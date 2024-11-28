@@ -1,5 +1,5 @@
 editAreaLoader.load_syntax["coldfusion"] = {
-	'DISPLAY_NAME' : 'Coldfusion'
+	"DISPLAY_NAME" : "Coldfusion"
 	,'COMMENT_SINGLE' : {1 : '//', 2 : '#'}
 	,'COMMENT_MULTI' : {'<!--' : '-->'}
 	,'COMMENT_MULTI2' : {'<!---' : '--->'}
