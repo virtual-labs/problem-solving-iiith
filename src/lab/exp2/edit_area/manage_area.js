@@ -10,7 +10,7 @@
 		var t1=t2=t2_1=t3=tLines=tend= new Date().getTime();
 		// l'editeur n'existe plus => on quitte
 		if(!editAreas[this.id])
-			return false;
+		{return false;}
 		
 		if(!this.smooth_selection && !this.do_highlight)
 		{
@@ -51,7 +51,7 @@
 					}
 					
 					// add special chars arround selected characters
-					selLength	= infos['selectionEnd'] - infos['selectionStart'];
+					var selLength	= infos['selectionEnd'] - infos['selectionStart'];
 					content		= content.substr( 0, infos["curr_pos"] - 1 ) + "\r\r" + content.substr( infos["curr_pos"] - 1, selLength ) + "\r\r" + content.substr( infos["curr_pos"] - 1 + selLength );
 					content		= '<span>'+ content.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace("\r\r", '</span><strong>').replace("\r\r", '</strong><span>') +'</span>';
 					
