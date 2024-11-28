@@ -94,7 +94,7 @@
 				var no_real_move=true;
 				if(infos["line_nb"]==1 && (this.assocBracket[selec_char] || this.revertAssocBracket[selec_char]) ){
 					
-					no_real_move=false;					
+					var no_real_move=false;					
 					//findEndBracket(infos["line_start"], infos["curr_pos"], selec_char);
 					if(this.findEndBracket(infos, selec_char) === true){
 						_$("end_bracket").style.visibility	="visible";
