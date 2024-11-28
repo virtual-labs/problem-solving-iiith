@@ -91,9 +91,9 @@ def index(req):
 	codeId=FormData['codeId'];
 	action = FormData['type']
 	Hints = FormData['hintC']
-	highHint = FormData['highHint']    
+	highHint = FormData['highHint']
 #	HighestHint = FormData['hintGenerate']
-	#save the code in a file 
+	#save the code in a file
 	codeName = PATH + "currentCode."+langauge;
 	F = open(codeName,"w");
 	F.write(code);
@@ -109,14 +109,14 @@ def index(req):
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
 		InputTestFiles 	= getInputFileNames(TEST_DIRECTORY);
 		JudgeData_html="""<table border="1" cellpadding="15" id="tableInpOut" >"""
 		JudgeData_html+="""<tr>
-		<td> Input Data </td> 
+		<td> Input Data </td>
 		<td> Expected Output </td>
 		<td> Code Output </td>
 		<td> Result </td>
@@ -125,7 +125,7 @@ def index(req):
 
 		for i in InputTestFiles:
 			Input =  i #Input File where the final-build cases are there
-			JudgeData_html+="<tr>";	
+			JudgeData_html+="<tr>";
 			F=open(Input,"r");
 			JudgeData_html+="<td>"+F.read()+"</td>"
 			F.close();
@@ -157,7 +157,7 @@ def index(req):
 					result = "Wrong Answer"
 					JudgeData_html+="<td> Failed </td>"
 					JudgeData_html+="<td> Check your algo </td>"
-					JudgeData_html+="</tr>";	
+					JudgeData_html+="</tr>";
 					break;
 			else:
 				JudgeData_html+="<td> Failed </td>"
@@ -168,9 +168,9 @@ def index(req):
 				else:
 					result = "Run Time Error";
 				JudgeData_html+="<td> "+result+" </td>"
-				JudgeData_html+="</tr>";	
+				JudgeData_html+="</tr>";
 				break;
-			JudgeData_html+="</tr>";	
+			JudgeData_html+="</tr>";
 		JudgeData_html+="</table>"
 	elif(action=="Run" and compileErrors!=""):
 		result = "Compile Error"
