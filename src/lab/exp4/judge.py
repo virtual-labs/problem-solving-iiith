@@ -109,7 +109,7 @@ def index(req):
 	elif(action=="Compile" and compileErrors==""):
 			result = "Compilation successful"
 
-	elif(action=="Run" and compileErrors==""):	
+	elif(action=="Run" and compileErrors==""):
 		#code compiled successfully
 		#now have to execute current.out
 		TEST_DIRECTORY = PATH +codeId  #directory where final-build cases are there
